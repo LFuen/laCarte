@@ -1,0 +1,29 @@
+.navigation {
+    background: rgba(255, 255, 255, 0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    list-style: none;
+}
+
+a {
+    padding: 1rem 0.5rem;
+    font-size: 1.6rem;
+    max-width: 140px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Special Elite', cursive;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    color: rgb(0, 0, 0);
+} 
+
+a:hover, a:focus {
+    background-image: radial-gradient(black,  rgba(88, 3, 3, 0.979));
+    color: rgb(255, 255, 255);
+}

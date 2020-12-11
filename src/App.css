@@ -1,38 +1,84 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background-image: linear-gradient(rgb(255, 255, 255), transparent),
+    linear-gradient(to top left, rgb(0, 0, 0), transparent),
+    linear-gradient(to top right, rgb(255, 0, 0), transparent);
+  background-blend-mode: screen;
+  background-attachment: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 
+========================================
+  SCROLLBAR
+======================================== 
+*/
+
+:root {
+  --shadow: #960303;
+  --scrollbarBG: rgb(0, 0, 0);
+  --thumbBG: #dddddd;
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+  border-radius: 10px;
+}
+
+/* Standard stuff, if you care to do that.
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+} */
+
+.side-scroll {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: auto;
+  padding-bottom: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+.side-scroll > div {
+  flex: 1;
+  margin-right: 20px;
+  flex: 0 0 100px;
+  height: 100px;
+  background: #ccc;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.side-scroll::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--thumbBG);
+  box-shadow: -100vh 0 0 100vh var(--shadow), 0 0 15px 5px black;
 }
