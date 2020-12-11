@@ -9,7 +9,7 @@
 
 .mealBox {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /* Style the list */
@@ -42,12 +42,14 @@
   border-bottom: 1px solid #eee;
   padding: 20px;
   text-align: center;
+  justify-content: center;
 }
 
 /* Grey list item */
 .price .grey {
   background-color: rgb(97, 97, 97);
   font-size: 20px;
+  align-items: center;
 }
 
 /* The "Sign Up" button */

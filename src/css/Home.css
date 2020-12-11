@@ -10,10 +10,7 @@ button {
     font-family: 'Special Elite', cursive;
 }
 
-.laCarte {
-    font-family: 'Sacramento', cursive;
-    font-size: 105px;
-}
+
 
 .flexed {
     display: flex !important;
@@ -24,13 +21,18 @@ button {
 .worked {
     font-family: 'Sacramento', cursive;
     font-family: 'Special Elite', cursive;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 h5 {
     font-family: 'Sacramento', cursive;
     font-family: 'Special Elite', cursive;
     font-size: 20px;
+}
+
+a:hover{
+    color: black;
+    background-color: aliceblue;
 }
 
 /* 

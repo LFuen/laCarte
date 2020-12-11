@@ -12,34 +12,34 @@ class MealPlan extends Component {
                     <h5>(We didn't say workaholic, you did.)</h5>
                 </div>
             <div className='mealBox'>
-                <div class="columns">
-                    <ul class="price">
-                        <li class="header">Late Nights</li>
-                        <li class="grey">$ 300.00 / Month</li>
+                <div className="columns">
+                    <ul className="price">
+                        <li className="header">Late Nights</li>
+                        <li className="grey">$ 300.00 / Month</li>
                         <li>10 Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
-                        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                        <li className="grey"><a href="#" className="button">Sign Up</a></li>
                     </ul>
                 </div>
 
-                <div class="columns">
-                    <ul class="price">
-                        <li class="header">Most Late Nights</li>
-                        <li class="grey">$ 500.00 / Month</li>
+                <div className="columns">
+                    <ul className="price">
+                        <li className="header">Most Late Nights</li>
+                        <li className="grey">$ 500.00 / Month</li>
                         <li>20 Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
-                        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                        <li className="grey"><a href="#" className="button">Sign Up</a></li>
                     </ul>
                 </div>
 
-                <div class="columns">
-                    <ul class="price">
-                        <li class="header">Straight Up Always Working</li>
-                        <li class="grey">$ 1,000.00 / Month</li>
+                <div className="columns">
+                    <ul className="price">
+                        <li className="header">Straight Up Always Working</li>
+                        <li className="grey">$ 1,000.00 / Month</li>
                         <li>Unlimited Amount of Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
                         <li>`<b>NO</b> cancellation fee (Up tp two hours before)`</li>
-                        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                        <li className="grey"><a href="#" className="button">Sign Up</a></li>
                     </ul>
                 </div>
                 </div>
@@ -51,3 +51,6 @@ class MealPlan extends Component {
 
 
 export default MealPlan
+
+
+// transitioning effect : https://blog.bitsrc.io/how-to-implement-smooth-transitions-in-react-bd0497b06b8

@@ -11,9 +11,9 @@ class Home extends Component {
                 <h3 className='worked'>The Healthy-Meal-Alternative App for the Busy Professional.</h3>
                 <h5>(We didn't say workaholic, you did.)</h5>
                 <div className='flexed'>
-                    <a href='/'><button className='shadow' id="newuser">Sign Me Up</button></a>
+                    <a href='/MealPlan'><button className='shadow' id="newuser">Sign Me Up</button></a>
                     <span title="Bon Apetit!"><img className="mainImage" alt="laCarte" src="https://lfuen.github.io/laCarte/images/laCarte.png"/></span> 
-                    <a href='/MealPlan'><button className='shadow' id="returning">Returning User</button></a>
+                    <a href='/Meals'><button className='shadow' id="returning">Returning User</button></a>
                 </div>
             </div>
         )
