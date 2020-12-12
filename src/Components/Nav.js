@@ -3,10 +3,11 @@ import {BrowserRouter, Route, NavLink} from 'react-router-dom'
 import '../css/Nav.css'
 import Chefs from './Chefs'
 import Home from './Home'
-
 import About from './About'
 import MealPlan from './MealPlan'
 import MealList from './MealList'
+import SignUp from './SignUp'
+import MealChoose from './MealChoose'
 
 
 
@@ -28,6 +29,8 @@ class Nav extends Component {
             <Route path='/Chefs' component={Chefs}/>
             <Route path='/About' component={About}/>
             <Route exact path='/MealPlan' component={MealPlan}/>
+            <Route exact path='/SignUp' component={SignUp}/>
+            <Route exact path='/MealChoose' component={MealChoose}/>
             </BrowserRouter>
         )
     }

@@ -1,0 +1,35 @@
+a:hover,
+a:focus {
+    background-image: radial-gradient(black, rgba(88, 3, 3, 0.979));
+    color: rgb(255, 255, 255);
+    background-size: 100%;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0.5rem;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Special Elite", cursive;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
+
+.option{
+    padding: 8px;
+    text-align: center;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+h3{
+    font-size: 25px;
+}
+

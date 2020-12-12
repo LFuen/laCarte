@@ -13,7 +13,7 @@ class Home extends Component {
                 <div className='flexed'>
                     <a href='/MealPlan'><button className='shadow' id="newuser">Sign Me Up</button></a>
                     <span title="Bon Apetit!"><img className="mainImage" alt="laCarte" src="https://lfuen.github.io/laCarte/images/laCarte.png"/></span> 
-                    <a href='/Meals'><button className='shadow' id="returning">Returning User</button></a>
+                    <a href='/MealChoose'><button className='shadow' id="returning">Returning User</button></a>
                 </div>
             </div>
         )

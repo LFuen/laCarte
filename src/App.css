@@ -1,18 +1,13 @@
+
 .App {
   text-align: center;
-  background-image: linear-gradient(rgb(255, 255, 255), transparent),
-    linear-gradient(to top left, rgb(0, 0, 0), transparent),
-    linear-gradient(to top right, rgb(255, 0, 0), transparent);
-  background-blend-mode: screen;
-  background-attachment: fixed;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-header {
-    background-color: #282c34;
+    background-color: #282c3400;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

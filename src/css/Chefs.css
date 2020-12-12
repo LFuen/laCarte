@@ -1,6 +1,13 @@
-img {
-    border-radius: 100px;
+.contain{
+    box-sizing: border-box;
 }
+
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+}
+
 
 .chefs{
     font-size: 20px;

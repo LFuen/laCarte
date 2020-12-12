@@ -1,6 +1,9 @@
 html {
-  height: 100%;
-  margin: 0;
+  background-image: linear-gradient(rgb(255, 255, 255), transparent),
+  linear-gradient(to top left, rgb(0, 0, 0), transparent),
+  linear-gradient(to top right, rgb(255, 0, 0), transparent);
+  background-blend-mode: screen;
+  background-attachment: fixed;
 }
 
 body {
