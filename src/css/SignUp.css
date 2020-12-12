@@ -5,6 +5,7 @@
 
 #login-box {
   position: relative;
+  border-radius: 100px;
   margin: 5% auto;
   width: 600px;
   height: 400px;

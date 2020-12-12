@@ -18,11 +18,11 @@ class SignUp extends Component {
                     <input type="password" name="password" placeholder="Password" />
                     <input type="password" name="password2" placeholder="Retype password" />
                     
-                    <a href='/MealList'><button className='shadow' type="submit" name="signup_submit" value="Sign me up" /></a>
+                    <a href='/MealChoose'><button className='shadow' type="submit" name="signup_submit" value="Sign me up">Sign Up</button></a>
                 </div>
                 
                 <div className="right">
-                    <span className="loginwith">Sign in with<br />social network</span>
+                    <span className="loginwith">Sign in with<br/>social network</span>
                     
                     <button className="social-signin facebook">Log in with facebook</button>
                     <button className="social-signin twitter">Log in with Twitter</button>
@@ -37,3 +37,6 @@ class SignUp extends Component {
 
 
 export default SignUp
+
+
+//CHECK OUT SOCIAL LOGINS https://auth0.com/learn/social-login/

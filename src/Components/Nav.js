@@ -8,6 +8,8 @@ import MealPlan from './MealPlan'
 import MealList from './MealList'
 import SignUp from './SignUp'
 import MealChoose from './MealChoose'
+import OrderForm from './OrderForm'
+import Cuisine from './Cuisine'
 
 
 
@@ -31,6 +33,8 @@ class Nav extends Component {
             <Route exact path='/MealPlan' component={MealPlan}/>
             <Route exact path='/SignUp' component={SignUp}/>
             <Route exact path='/MealChoose' component={MealChoose}/>
+            <Route exact path='/OrderForm' component={OrderForm}/>
+            <Route exact path='/Cuisine' component={Cuisine}/>
             </BrowserRouter>
         )
     }

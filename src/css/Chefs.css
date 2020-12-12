@@ -1,5 +1,6 @@
 .contain{
-    box-sizing: border-box;
+    display: flex;
+    align-content: center;
 }
 
 .box {
