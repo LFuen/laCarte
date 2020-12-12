@@ -9,7 +9,7 @@ class Chefs extends Component {
                 <h1>CHEFS</h1>
                 <br/>
                 <section className='background'>
-                    <span title="La Carte"><img className="chefMoji" alt="chefMoji" src="https://lfuen.github.io/laCarte/images/chefmoji.jpg"/></span>
+                    <span title="La Carte"><img className="chefMoji" alt="chefMoji" src="https://lfuen.github.io/laCarte/images/chefmoji.png"/></span>
                 </section>
                 <ul>
                     <li>Chef Johnathan Middleton</li>
