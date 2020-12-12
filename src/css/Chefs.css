@@ -1,0 +1,5 @@
+.background {
+    background: radial-gradient (transparent 50%, black), whitesmoke;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0);
+    justify-content: center;
+}
