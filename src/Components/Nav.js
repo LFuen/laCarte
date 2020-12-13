@@ -12,6 +12,7 @@ import OrderForm from './OrderForm'
 import Cuisine from './Cuisine'
 import Ingredients from './Ingredients'
 import OrderPlaced from './OrderPlaced'
+import SignIn from './SignIn'
 
 
 
@@ -39,6 +40,7 @@ class Nav extends Component {
             <Route exact path='/Cuisine' component={Cuisine}/>
             <Route exact path='/Ingredients' component={Ingredients}/>
             <Route exact path='/OrderPlaced' component={OrderPlaced}/>
+            <Route exact path='/SignIn' component={SignIn}/>
             </BrowserRouter>
         )
     }

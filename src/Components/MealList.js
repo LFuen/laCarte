@@ -20,9 +20,20 @@ class MealList extends Component {
         return (
             <div >
                 {/* {this.state.meals.map((meal, index) => (
-                    <h4 key={index}>This is {meal.name}</h4>  
+                    <h4 key={index}> {meal.name}</h4>  
                 ))} */}
-<a href='/Ingredients' className='meal'>Argentinian Veal Cutlets with Vegatables</a>
+
+            </div>
+        )
+    }
+}
+
+
+
+export default MealList
+
+
+{/* <a href='/Ingredients' className='meal'>Argentinian Veal Cutlets with Vegatables</a>
 <a href='/Ingredients' className='meal'>Asian-Style Chicken Orzo Salad</a>
 <a href='/Ingredients' className='meal'>Baba Ghanoush</a>
 <a href='/Ingredients' className='meal'>Bibimbap</a>
@@ -79,17 +90,10 @@ class MealList extends Component {
 <a href='/Ingredients' className='meal'>Traditional Falafel</a>
 <a href='/Ingredients' className='meal'>Tuna and Negi Sushi Roll</a>
 <a href='/Ingredients' className='meal'>Turkey Burger</a>
-<a href='/Ingredients' className='meal'>Wonton Soup</a>
-            </div>
-        )
-    }
-}
-
-
-
-export default MealList
-
+<a href='/Ingredients' className='meal'>Wonton Soup</a> */}
 
 
 // http://www.hackingwithreact.com/read/1/13/rendering-an-array-of-data-with-map-and-jsx
+
+
 

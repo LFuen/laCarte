@@ -3,13 +3,13 @@
   align-items: center; 
   justify-content: center; 
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
-  color: aliceblue ;
+  text-shadow: 2px 2px rgb(0, 0, 0) ;
+  color: rgb(233, 111, 111);
   padding: 10px;
   position: fixed;
   bottom: 0;
   height: 100px;
   width: 100%;
   font-size: 20px;
-  font-family: 'Sacramento', cursive;
   font-family: 'Special Elite', cursive;
 }

@@ -24,7 +24,7 @@ form{
   flex: 2;
 }
 .title{
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgb(233, 111, 111)), color-stop(100, #70EAFF));
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgb(233, 111, 111)), color-stop(100, #5e0202));
   background: -moz-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
   background: -ms-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
   background: -o-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
