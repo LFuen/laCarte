@@ -18,6 +18,7 @@ class MealPlan extends Component {
                         <li className='grey'>$ 300.00 / Month</li>
                         <li>10 Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
+                        <li>`Free Delivery (Driver Tip Not Included)`</li>
                         <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
                     </ul>
                 </div>
@@ -28,6 +29,7 @@ class MealPlan extends Component {
                         <li className='grey'>$ 500.00 / Month</li>
                         <li>20 Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
+                        <li>`Free Delivery (Driver Tip Not Included)`</li>
                         <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
                     </ul>
                 </div>
@@ -38,6 +40,7 @@ class MealPlan extends Component {
                         <li className='grey'>$ 1,000.00 / Month</li>
                         <li>Unlimited Amount of Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
+                        <li>`Free Delivery (Driver Tip Not Included)`</li>
                         <li>`<b>NO</b> cancellation fee (Up tp two hours before)`</li>
                         <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
                     </ul>

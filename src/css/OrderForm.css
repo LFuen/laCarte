@@ -10,30 +10,36 @@
 
 .d-flex{
   display: flex;
-  flex-direction: row;
-  background: #f6f6f6;
+  flex-direction: column;
+  background: #646464;
   border-radius: 0 0 5px 5px;
+  border:5px solid rgb(255, 255, 255);
   padding: 25px;
 }
 form{
   flex: 4;
+  flex-direction: column;
 }
 .Yorder{
   flex: 2;
 }
 .title{
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
-  background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-  background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-  background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-  background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgb(233, 111, 111)), color-stop(100, #70EAFF));
+  background: -moz-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
+  background: -ms-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
+  background: -o-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
+  background: linear-gradient(to bottom right, rgb(233, 111, 111) 0%, #ffffff 100%);
   border-radius:5px 5px 0 0 ;
+  border-top: 5px solid rgb(0, 0, 0);
+  border-left: 5px solid rgb(0, 0, 0); 
+  border-right: 5px solid rgb(0, 0, 0);
   padding: 20px;
-  color: #f6f6f6;
+  color: #3b0000;
 }
 h2{
   margin: 0;
   padding-left: 15px; 
+  text-decoration: none;
 }
 .required{
   color: red;
@@ -54,8 +60,8 @@ input[type="text"], input[type="tel"], input[type="email"], select
   height: 30px;
   padding: 5px 10px;
   margin-bottom: 10px;
-  border: 1px solid #dadada;
-  color: #888;
+  border: 1px solid #ffffff;
+  color: rgb(71, 0, 0);
 }
 select{
   width: 72%;
@@ -63,12 +69,7 @@ select{
   padding: 5px 10px;
   margin-bottom: 10px;
 }
-.Yorder{
-  margin-top: 15px;
-  height: 600px;
-  padding: 20px;
-  border: 1px solid #dadada;
-}
+
 table{
   margin: 0;
   padding: 0;
@@ -79,25 +80,25 @@ th{
 }
 tr>td:nth-child(1){
   text-align: left;
-  color: #2d2d2a;
+  color: #250000;
 }
 tr>td:nth-child(2){
   text-align: right;
-  color: #52ad9c;
+  color:rgb(53, 0, 0);
 }
 td{
-  border-bottom: 1px solid #dadada;
+  border-bottom: 5px solid #dadada;
   padding: 25px 25px 25px 0;
 }
 
 p{
   display: block;
-  color: #888;
+  color: rgb(61, 0, 0);
   margin: 0;
   padding-left: 25px;
 }
 .Yorder>div{
-  padding: 15px 0; 
+  padding: 5px 0; 
 }
 
 

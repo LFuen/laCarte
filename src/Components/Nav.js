@@ -10,6 +10,7 @@ import SignUp from './SignUp'
 import MealChoose from './MealChoose'
 import OrderForm from './OrderForm'
 import Cuisine from './Cuisine'
+import Ingredients from './Ingredients'
 
 
 
@@ -27,14 +28,15 @@ class Nav extends Component {
                 <NavLink to='/About'>About</NavLink>
             </nav>
             <Route exact path='/' component={Home}/>
-            <Route path='/MealList' component={MealList}/>
-            <Route path='/Chefs' component={Chefs}/>
-            <Route path='/About' component={About}/>
+            <Route exact path='/MealList' component={MealList}/>
+            <Route exact path='/Chefs' component={Chefs}/>
+            <Route exact path='/About' component={About}/>
             <Route exact path='/MealPlan' component={MealPlan}/>
             <Route exact path='/SignUp' component={SignUp}/>
             <Route exact path='/MealChoose' component={MealChoose}/>
             <Route exact path='/OrderForm' component={OrderForm}/>
             <Route exact path='/Cuisine' component={Cuisine}/>
+            <Route exact path='/Ingredients' component={Ingredients}/>
             </BrowserRouter>
         )
     }

@@ -1,0 +1,28 @@
+h1{
+    font-size: 60px;
+    justify-content: space-evenly;
+}
+
+.bio{
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+}
+
+.cuisine{
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+}
+
+.schedule{
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+}
+
+a{
+    font-size: 25px;
+}
+
+a:hover{
+    color: black;
+    background-color: aliceblue;
+}
