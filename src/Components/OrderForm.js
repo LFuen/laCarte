@@ -35,7 +35,7 @@ class OrderForm extends Component{
                         <span>Phone</span> <span className="required">*</span>
                         <input type="tel" name="city"/> 
                         </label>
-                        <button type="button">Place Order</button>
+                        <a href='/OrderPlaced'><button type="button">Place Order</button></a>
                     </form>
                 </div>
 

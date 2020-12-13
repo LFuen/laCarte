@@ -11,6 +11,7 @@ import MealChoose from './MealChoose'
 import OrderForm from './OrderForm'
 import Cuisine from './Cuisine'
 import Ingredients from './Ingredients'
+import OrderPlaced from './OrderPlaced'
 
 
 
@@ -37,6 +38,7 @@ class Nav extends Component {
             <Route exact path='/OrderForm' component={OrderForm}/>
             <Route exact path='/Cuisine' component={Cuisine}/>
             <Route exact path='/Ingredients' component={Ingredients}/>
+            <Route exact path='/OrderPlaced' component={OrderPlaced}/>
             </BrowserRouter>
         )
     }
