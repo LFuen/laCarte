@@ -12,30 +12,30 @@ class OrderForm extends Component{
                 <div className="d-flex">
                     <form action="" method="">
                         <label>
-                        <span>Street Address</span><span className="required">*</span>
+                        <span>Street Address *</span><br/>
                         <input type="text" name="houseadd" placeholder="House number and street name" required/>
                         </label>
                         <label>
-                        <span>&nbsp;</span>
+                        <span>Address 2</span><br/>
                         <input type="text" name="apartment" placeholder="Apartment, suite, unit etc. (optional)"/>
                         </label>
                         <label>
-                        <span>Town / City</span> <span className="required">*</span>
-                        <input type="text" name="city"/> 
+                        <span>City *</span><br/>
+                        <input type="text" name="city" placeholder='City'/> 
                         </label>
                         <label>
-                        <span>State / County</span> <span className="required">*</span>
-                        <input type="text" name="city"/> 
+                        <span>State / County *</span><br/>
+                        <input type="text" name="state" placeholder='State'/> 
                         </label>
                         <label>
-                        <span>Postcode / ZIP</span> <span className="required">*</span>
-                        <input type="text" name="city"/> 
+                        <span>Postcode / ZIP *</span><br/>
+                        <input type="text" name="zip" placeholder='Zip Code'/> 
                         </label>
                         <label>
-                        <span>Phone</span> <span className="required">*</span>
-                        <input type="tel" name="city"/> 
+                        <span>Phone *</span><br/>
+                        <input type="tel" name="tel" placeholder='(000) 000-000'/> 
                         </label>
-                        <a href='/OrderPlaced'><button type="button">Place Order</button></a>
+                        <a href='/OrderPlaced'><button type="button" className='shadow'>Place Order</button></a>
                     </form>
                 </div>
 

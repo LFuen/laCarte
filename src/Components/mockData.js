@@ -1,0 +1,40 @@
+const meals = [
+    {
+        "meal_name": 'Asian-Style Chicken Orzo Salad',
+        "img_url": 'https://lfuen.github.io/laCarte/images/meals/orzo.jpg',
+        "ingredients": ['Edamame',
+        'Orzo',
+        'Chicken',
+        'Onions',
+        'Pepper',
+        'Vegetable Oil',
+        'Sesame Oil',
+        'Ginger',
+        'Rice Wine Vinegar',
+        'Soy Sauce',
+        'Hoisin Sauce',
+        'Almonds'],
+        "chef":['Johnathan', 'Francesca', 'Christian', 'Madelyn'],
+        "origin": 'Asian',
+    },
+    {
+        "meal_name": 'Baba Ghanoush',
+        "img_url": 'https://lfuen.github.io/laCarte/images/meals/baba.jpg',
+        "ingredients": ['Eggplant',
+        'Flaxseed Oil',
+        'Garlic',
+        'Lemon Juice',
+        'Cumin',
+        'Tahini',
+        'Extra-Virgin Olive Oil',
+        'Pine Nuts',
+        'Parsley',
+        'Paprika',
+        'Salt',
+        'Black Pepper'],
+        "chef":['Johnathan', 'Joaquin', 'Christian'],
+        "origin": 'Middle Eastern',
+    }
+];
+
+export default meals

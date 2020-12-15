@@ -1,5 +1,10 @@
-'Asian-Style Chicken Orzo Salad', 
-'https://lfuen.github.io/laCarte/meals/orzo.html',
+BEGIN;
+
+INSERT INTO meals_list
+    (meal_name, img_url, ingredients, chef, origin)
+VALUES
+('Asian-Style Chicken Orzo Salad', 
+'https://lfuen.github.io/laCarte/images/meals/orzo.jpg',
 ('Edamame',
 'Orzo',
 'Chicken',
@@ -13,10 +18,10 @@
 'Hoisin Sauce',
 'Almonds'),
 ('Johnathan', 'Francesca', 'Christian', 'Madelyn'),
-'Asian'
+'Asian'),
 
-'Baba Ghanoush',
-'https://lfuen.github.io/laCarte/meals/baba.html',
+('Baba Ghanoush',
+'https://lfuen.github.io/laCarte/images/meals/baba.jpg',
 ('Eggplant',
 'Flaxseed Oil',
 'Garlic',
@@ -30,10 +35,10 @@
 'Salt',
 'Black Pepper'),
 ('Johnathan', 'Joaquin', 'Christian'),
-'Middle Eastern'
+'Middle Eastern'),
 
-'Bibimbap',
-'https://lfuen.github.io/laCarte/meals/bibimbap.html',
+('Bibimbap',
+'https://lfuen.github.io/laCarte/images/meals/bibimbap.jpg',
 ('Garlic',
 'Ginger',
 'Fish Sauce',
@@ -52,10 +57,10 @@
 'Sunflower Oil',
 'Eggs'),
 ('Johnathan', 'Francesca', 'Christian', 'Madelyn'),
-'Asian'
+'Asian'),
 
-'Butter Chicken with Spinach',
-'https://lfuen.github.io/laCarte/meals/butterChicken.html',
+('Butter Chicken with Spinach',
+'https://lfuen.github.io/laCarte/images/meals/butterChicken.jpg',
 ('Spinach',
 'Garlic',
 'Yogurt',
@@ -73,20 +78,20 @@
 'Coconut Milk',
 'Vegetable Stock'),
 ('Johnathan', 'Christian', 'Madelyn'),	
-'Indian'
+'Indian'),
 
-'Calamari and Figueras Onion', 
-'https://lfuen.github.io/laCarte/meals/calamari.html',
+('Calamari and Figueras Onion',
+'https://lfuen.github.io/laCarte/images/meals/calamari.jpg',
 ('Squid',
 'Onions',
 'Wine',
 'Tomato Sauce',
 'Butter'),	
 ('Johnathan', 'Francesca'),
-'Spanish'
+'Spanish'),
 
-'Camarones del Sur',
-'https://lfuen.github.io/laCarte/meals/camarones.html',
+('Camarones del Sur',
+'https://lfuen.github.io/laCarte/images/meals/camarones.jpg',
 ('Salsa Encebichada',
 'Hot Ceviche',
 'Andean Pearls',
@@ -118,10 +123,10 @@
 'Shrimp',
 'Vegetable Oil'),
 ('Johnathan', 'Francesca', 'Joaquin'),
-'Latin American'
+'Latin American'),
 
-'Ceviche',
-'https://lfuen.github.io/laCarte/meals/ceviche.html',
+('Ceviche',
+'https://lfuen.github.io/laCarte/images/meals/ceviche.jpg',
 ('Corvina Filet',
 'Aji Limo',
 'Peruvian Lemons',
@@ -130,10 +135,10 @@
 'Salt',
 'Pepper'),
 ('Johnathan', 'Francesca', 'Joaquin'),
-'Latin American'
+'Latin American'),
 
-'Chicken Po Boy',
-'https://lfuen.github.io/laCarte/meals/poBoy.html',
+('Chicken Po Boy',
+'https://lfuen.github.io/laCarte/images/meals/poBoy.jpg',
 ('Cabbage',
 'Carrots',
 'Mint',
@@ -151,10 +156,10 @@
 'Vegetable Oil',
 'Mayonnaise'),
 ('Johnathan', 'Christian', 'Madelyn'),	
-'American'
+'American'),
 
-'Chicken Tikka Masala',
-'https://lfuen.github.io/laCarte/meals/tikkaMasala.html',
+('Chicken Tikka Masala',
+'https://lfuen.github.io/laCarte/images/meals/tikkaMasala.jpg',
 ('Chicken',
 'Lemon',
 'Salt',
@@ -172,10 +177,10 @@
 'Cilantro',
 'Rice'),
 ('Johnathan', 'Christian', 'Madelyn'),
-'Indian'
+'Indian'),
 
-'Chili Pork Adobo',
-'https://lfuen.github.io/laCarte/meals/porkAdobo.html',
+('Chili Pork Adobo',
+'https://lfuen.github.io/laCarte/images/meals/porkAdobo.jpg',
 ('Pork',
 'Vegetable Oil',
 'Onions',
@@ -190,10 +195,10 @@
 'Rice',
 'Saffron'),
 ('Johnathan', 'Francesca'),
-'Spanish'
+'Spanish'),
 
-'Chili Sin Carne',
-'https://lfuen.github.io/laCarte/meals/chili.html',
+('Chili Sin Carne',
+'https://lfuen.github.io/laCarte/images/meals/chili.jpg',
 ('Vegetarian Mince',
 'Oil',
 'Garlic',
@@ -212,10 +217,10 @@
 'Cayenne Pepper',
 'Basmati Rice'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Christian', 'Madelyn'),
-'Mexican'
+'Mexican'),
 
-'Cobb Salad',
-'https://lfuen.github.io/laCarte/meals/cobb.html',
+('Cobb Salad',
+'https://lfuen.github.io/laCarte/images/meals/cobb.jpg',
 ('Chicken Breast',
 'Romaine Heart',
 'Radicchio',
@@ -234,10 +239,10 @@
 'Butter',
 'Brown Sugar'),
 ('Johnathan', 'Christian', 'Madelyn'),
-'American'
+'American'),
 
-'Coconut Soup with Chicken',
-'https://lfuen.github.io/laCarte/meals/coconutSoup.html',
+('Coconut Soup with Chicken',
+'https://lfuen.github.io/laCarte/images/meals/coconutSoup.jpg',
 ('Oil',
 'Onions',
 'Garlic',
@@ -253,10 +258,10 @@
 'Sugar',
 'Lime Juice'),
 ('Johnathan', 'Joaquin', 'Christian', 'Madelyn'),
-'Thai'
+'Thai'),
 
-'Coq Au Vin',
-'https://lfuen.github.io/laCarte/meals/coqAuVin.html',
+('Coq Au Vin',
+'https://lfuen.github.io/laCarte/images/meals/coqAuVin.jpg',
 ('Chicken',
 'Flour',
 'Cognac',
@@ -270,20 +275,20 @@
 'Pepper',
 'Butter'),
 ('Joaquin', 'Christian'),
-'French'
+'French'),
 
-'Cuban Plantains with Rice and Olives',
-'https://lfuen.github.io/laCarte/meals/cuban.html',
+('Cuban Plantains with Rice and Olives',
+'https://lfuen.github.io/laCarte/images/meals/cuban.jpg',
 ('Sofrito',
 'Olives',
 'Sazon',
 'Rice',
 'Plantains'),
 ('Johnathan', 'Francesca', 'Joaquin'),
-'Latin American'
+'Latin American'),
 
-'Duck Confit with Shallots',
-'https://lfuen.github.io/laCarte/meals/duckConfit.html',
+('Duck Confit with Shallots',
+'https://lfuen.github.io/laCarte/images/meals/duckConfit.jpg',
 ('Duck',
 'Shallots',
 'Salt',
@@ -293,10 +298,10 @@
 'Duck Fat',
 'White Bread'), 
 ('Joaquin', 'Christian'),
-'French'
+'French'),
 
-'Eggplant Moussaka with Sheeps Milk Cheese',
-'https://lfuen.github.io/laCarte/meals/eggplant.html',
+('Eggplant Moussaka with Sheeps Milk Cheese',
+'https://lfuen.github.io/laCarte/images/meals/eggplant.jpg',
 ('Olive Oil',
 'Aubergines (eggplant)',
 'Onions',
@@ -314,12 +319,12 @@
 'Nutmeg',
 'Lemon Juice',
 'Egg',
-`Sheep's Cheese`),
+'Sheeps Cheese'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Madelyn'),
-'Greek'
+'Greek'),
 
-'Fajitas with Beef',
-'https://lfuen.github.io/laCarte/meals/fajita.html',
+('Fajitas with Beef',
+'https://lfuen.github.io/laCarte/images/meals/fajita.jpg',
 ('Steak',
 'Sunflower Oil',
 'Seasoning',
@@ -331,10 +336,10 @@
 'Cayenne Pepper',
 'Chili Sauce'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Christian', 'Madelyn'),
-'Mexican'
+'Mexican'),
 
-'Flautas',
-'https://lfuen.github.io/laCarte/meals/flautas.html',
+('Flautas',
+'https://lfuen.github.io/laCarte/images/meals/flautas.jpg',
 ('Chicken',
 'Corn Tortillas',
 'Vegetable Oil',
@@ -347,10 +352,10 @@
 'Marjoram',
 'Bread'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Christian', 'Madelyn'),
-'Mexican'
+'Mexican'),
 
-'Frog Meuniere',
-'https://lfuen.github.io/laCarte/meals/frog.html',
+('Frog Meuniere',
+'https://lfuen.github.io/laCarte/images/meals/frog.jpg',
 ('Fresh Frogs',
 'Lemon',
 'Olive Oil',
@@ -360,10 +365,10 @@
 'White Pepper',
 'Fleur du Sel'),
 ('Joaquin', 'Christian'),
-'French'
+'French'),
 
-'Garides Saganaki (Greek Shrimp Gratin)',
-'https://lfuen.github.io/laCarte/meals/garides.html',
+('Garides Saganaki (Greek Shrimp Gratin)',
+'https://lfuen.github.io/laCarte/images/meals/garides.jpg',
 ('Olive Oil',
 'Onions',
 'Garlic',
@@ -377,10 +382,10 @@
 'Feta Cheese',
 'Oregano'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Madelyn'),
-'Greek'
+'Greek'),
 
-'Gazpacho',
-'https://lfuen.github.io/laCarte/meals/gazpacho.html',
+('Gazpacho',
+'https://lfuen.github.io/laCarte/images/meals/gazpacho.jpg',
 ('Tomatoes',
 'Cucumber',
 'Green Bell Peppers',
@@ -393,10 +398,10 @@
 'Salt',
 'Black Pepper'),
 ('Johnathan', 'Francesca'),
-'Spanish'
+'Spanish'),
 
-'Greek Bouyourdi: Grilled Feta, Tomato, and Pepper',
-'https://lfuen.github.io/laCarte/meals/bouyourdi.html',
+('Greek Bouyourdi: Grilled Feta, Tomato, and Pepper',
+'https://lfuen.github.io/laCarte/images/meals/bouyourdi.jpg',
 ('Tomatoes',
 'Feta Cheese',
 'Green Bell Peppers',
@@ -405,10 +410,10 @@
 'Oregano',
 'Bread'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Madelyn'),
-'Greek'
+'Greek'),
 
-'Greek Salad',
-'https://lfuen.github.io/laCarte/meals/greekSalad.html',
+('Greek Salad',
+'https://lfuen.github.io/laCarte/images/meals/greekSalad.jpg',
 ('Cucumbers',
 'Green Bell Peppers',
 'Tomatoes',
@@ -421,13 +426,13 @@
 'Olive Oil',
 'Capers',
 'Sugar',
-'Basil'),
-'Roman Letttuce',
+'Basil',
+'Roman Letttuce'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Madelyn'),
-'Greek'
+'Greek'),
 
-'Green Matcha Chicken Curry with Lime',
-'https://lfuen.github.io/laCarte/meals/matcha.html',
+('Green Matcha Chicken Curry with Lime',
+'https://lfuen.github.io/laCarte/images/meals/matcha.jpg',
 ('Coriander',
 'Cumin',
 'Matcha Powder',
@@ -452,10 +457,10 @@
 'Lime Wedges',
 'Crushed Peppercorn'),
 ('Johnathan', 'Joaquin', 'Christian', 'Madelyn'),
-'Thai'
+'Thai'),
 
-'Grilled Tuna Skewers with Orange and Ginger on Couscous',
-'https://lfuen.github.io/laCarte/meals/grilledTuna.html',
+('Grilled Tuna Skewers with Orange and Ginger on Couscous',
+'https://lfuen.github.io/laCarte/images/meals/grilledTuna.jpg',
 ('Tuna',
 'Ginger',
 'Olive Oil',
@@ -467,10 +472,10 @@
 'Almonds',
 'Parsley'),
 ('Johnathan', 'Joaquin', 'Christian'),
-'Middle Eastern'
+'Middle Eastern'),
 
-'Huevos Rancheros',
-'https://lfuen.github.io/laCarte/meals/huevos.html',
+('Huevos Rancheros',
+'https://lfuen.github.io/laCarte/images/meals/huevos.jpg',
 ('Olive Oil',
 'Onions',
 'Garlic',
@@ -483,10 +488,10 @@
 'Marjoram',
 'Bread'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Christian', 'Madelyn'),
-'Mexican'
+'Mexican'),
 
-'Kedgeree (Haddock with Rice)',
-'https://lfuen.github.io/laCarte/meals/kedgeree.html',
+('Kedgeree (Haddock with Rice)',
+'https://lfuen.github.io/laCarte/images/meals/kedgeree.jpg',
 ('Milk',
 'Haddock',
 'Butter',
@@ -496,10 +501,10 @@
 'Rice',
 'Parsley'),
 ('Johnathan', 'Christian', 'Madelyn'),
-'Indian'
+'Indian'),
 
-'Korean Kimchi',
-'https://lfuen.github.io/laCarte/meals/kimchi.html',
+('Korean Kimchi',
+'https://lfuen.github.io/laCarte/images/meals/kimchi.jpg',
 ('Cabbage',
 'Salt',
 'Daikon',
@@ -511,10 +516,10 @@
 'Garlic',
 'Sugar'), 
 ('Johnathan', 'Francesca', 'Christian', 'Madelyn'),	
-'Asian'
+'Asian'),
 
-'Lamb Kebabs on Tabbouleh',
-'https://lfuen.github.io/laCarte/meals/lambKebabs.html',
+('Lamb Kebabs on Tabbouleh',
+'https://lfuen.github.io/laCarte/images/meals/lambKebabs.jpg',
 ('Bulgar Wheat',
 'Vegetable Stock',
 'Tomatoes',
@@ -531,10 +536,10 @@
 'Mustard',
 'Pepper'),
 ('Johnathan', 'Joaquin', 'Christian'),	
-'Middle Eastern'
+'Middle Eastern'),
 
-'Mexican Corn and Bean Salad',
-'https://lfuen.github.io/laCarte/meals/cornBean.html',
+('Mexican Corn and Bean Salad',
+'https://lfuen.github.io/laCarte/images/meals/cornBean.jpg',
 ('Oil',
 'Onions',
 'Garlic',
@@ -549,10 +554,10 @@
 'Pepper',
 'Cherry Tomatoes'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Christian', 'Madelyn'),
-'Mexican'
+'Mexican'),
 
-'Miso Soup with Tofu, Bean Sprouts, and Herbs',
-'https://lfuen.github.io/laCarte/meals/misoSoup.html',
+('Miso Soup with Tofu, Bean Sprouts, and Herbs',
+'https://lfuen.github.io/laCarte/images/meals/misoSoup.jpg',
 ('Kombu',
 'Bonito Flakes',
 'Miso Paste',
@@ -561,10 +566,10 @@
 'Fresh Herbs',
 'Chili Sauce'),
 ('Johnathan', 'Francesca', 'Christian', 'Madelyn'),
-'Asian'
+'Asian'),
 
-'Nicoise Salad with Fresh Tuna',
-'https://lfuen.github.io/laCarte/meals/nicoise.html',
+('Nicoise Salad with Fresh Tuna',
+'https://lfuen.github.io/laCarte/images/meals/nicoise.jpg',
 ('Tuna',
 'Eggs',
 'Purple Potatos',
@@ -581,10 +586,10 @@
 'Green Beans',
 'Black Taggiasche Oils'),
 ('Joaquin', 'Christian'),
-'French'
+'French'),
 
-'Pad Thai Noodles',
-'https://lfuen.github.io/laCarte/meals/padThai.html',
+('Pad Thai Noodles',
+'https://lfuen.github.io/laCarte/images/meals/padThai.jpg',
 ('Rice Noodles',
 'Lime Juice',
 'Garlic',
@@ -597,10 +602,10 @@
 'Peanuts',
 'Mustard'),
 ('Johnathan', 'Joaquin', 'Christian', 'Madelyn'),
-'Thai'
+'Thai'),
 
-'Patatas Bravas',
-'https://lfuen.github.io/laCarte/meals/patatas.html',
+('Patatas Bravas',
+'https://lfuen.github.io/laCarte/images/meals/patatas.jpg',
 ('Potatoes',
 'Tomatoes',
 'Onions',
@@ -613,26 +618,26 @@
 'Olive Oil',
 'Sea Salt'),
 ('Johnathan', 'Francesca'),
-'Spanish'
+'Spanish'),
 
-`Pide (Turkish Flat Bread) with Sheep's Cheese Filling`,
-'https://lfuen.github.io/laCarte/meals/pide.html',
+('Pide (Turkish Flat Bread) with Sheeps Cheese Filling',
+'https://lfuen.github.io/laCarte/images/meals/pide.jpg',
 ('Flour',
 'Yeast',
 'Sugar',
 'Salt',
 'Oil',
 'Yogurt',
-`Sheep's Cheese`,
+'Sheeps Cheese',
 'Parsley',
 'Olive Oil',
 'Lemon Juice',
 'Garlic'),
 ('Johnathan', 'Joaquin', 'Christian'),	
-'Middle Eastern'
+'Middle Eastern'),
 
-'Potato Tortilla',
-'https://lfuen.github.io/laCarte/meals/potatoTortilla.html',
+('Potato Tortilla',
+'https://lfuen.github.io/laCarte/images/meals/potatoTortilla.jpg',
 ('Potatoes',
 'Red Peppers',
 'Cherry Tomatoes',
@@ -644,10 +649,10 @@
 'Nutmeg',
 'Parsley'),
 ('Johnathan', 'Francesca'),
-'Spanish'
+'Spanish'),
 
-'Ravioli with Gorganzola, Pear, and Walnuts',
-'https://lfuen.github.io/laCarte/meals/ravioli.html',
+('Ravioli with Gorganzola, Pear, and Walnuts',
+'https://lfuen.github.io/laCarte/images/meals/ravioli.jpg',
 ('Walnuts',
 'Ricotta Cheese',
 'Olive Oil',
@@ -657,10 +662,10 @@
 'Pear',
 'Lemon Juice'),
 ('Francesca', 'Joaquin'),
-'Italian'
+'Italian'),
 
-'Red Duck Curry',
-'https://lfuen.github.io/laCarte/meals/redDuck.html',
+('Red Duck Curry',
+'https://lfuen.github.io/laCarte/images/meals/redDuck.jpg',
 ('Duck',
 'Tomatoes',
 'Lime',
@@ -672,10 +677,10 @@
 'Fish Sauce',
 'Brown Sugar'),
 ('Johnathan', 'Joaquin', 'Christian', 'Madelyn'),
-'Thai'
+'Thai'),
 
-'Rigatoni with Veal',
-'https://lfuen.github.io/laCarte/meals/rigatoni.html',
+('Rigatoni with Veal',
+'https://lfuen.github.io/laCarte/images/meals/rigatoni.jpg',
 ('Veal',
 'Carrots',
 'Celery',
@@ -694,10 +699,10 @@
 'White Beans',
 'Rigatoni'),
 ('Francesca', 'Joaquin'),
-'Italian'
+'Italian'),
 
-'Roast Lamb with Indian Spices',
-'https://lfuen.github.io/laCarte/meals/roastLamb.html',
+('Roast Lamb with Indian Spices',
+'https://lfuen.github.io/laCarte/images/meals/roastLamb.jpg',
 ('Leg of Lamb',
 'Corriander',
 'Cumin',
@@ -714,10 +719,10 @@
 'Garam Masala',
 'Cassia Bark'),
 ('Johnathan', 'Christian', 'Madelyn'),	
-'Indian'
+'Indian'),
 
-'Roasted Pumpkin and Pear Soup',
-'https://lfuen.github.io/laCarte/meals/roastedPumpkin.html',
+('Roasted Pumpkin and Pear Soup',
+'https://lfuen.github.io/laCarte/images/meals/roastedPumpkin.jpg',
 ('Pear',
 'Pumpkin',
 'Tomatoes',
@@ -730,10 +735,10 @@
 'Chives',
 'Fresh Cream'),
 ('Johnathan',  'Christian', 'Madelyn'),
-'American'
+'American'),
 
-'Salmon Maki Sushi',
-'https://lfuen.github.io/laCarte/meals/salmonMaki.html',
+('Salmon Maki Sushi',
+'https://lfuen.github.io/laCarte/images/meals/salmonMaki.jpg',
 ('Salmon',
 'Nori Sheets',
 'Wasabi Paste',
@@ -743,10 +748,10 @@
 'Salt',
 'Sugar'),
 ('Johnathan', 'Francesca', 'Christian', 'Madelyn'),
-'Asian'
+'Asian'),
 
-'Seared Scallops with Osetra Caviar and Potato-Chive Mousseline',
-'https://lfuen.github.io/laCarte/meals/scallops.html',
+('Seared Scallops with Osetra Caviar and Potato-Chive Mousseline',
+'https://lfuen.github.io/laCarte/images/meals/scallops.jpg',
 ('Potatoes',
 'Kosher Salt',
 'Butter',
@@ -759,10 +764,10 @@
 'Lemon Juice',
 'Osetra Caviar'),
 ('Johnathan', 'Christian', 'Madelyn'),
-'American'
+'American'),
 
-'Slow-Cooked Beef Short Ribs',
-'https://lfuen.github.io/laCarte/meals/shortRibs.html',
+('Slow-Cooked Beef Short Ribs',
+'https://lfuen.github.io/laCarte/images/meals/shortRibs.jpg',
 ('Beef Short Ribs',
 'Salt',
 'Oil',
@@ -773,10 +778,10 @@
 'Oregano',
 'Chili Peppers'),
 ('Johnathan', 'Francesca', 'Joaquin'),
-'Latin American'
+'Latin American'),
 
-'Spaghetti Napoli',
-'https://lfuen.github.io/laCarte/meals/spaghetti.html',
+('Spaghetti Napoli',
+'https://lfuen.github.io/laCarte/images/meals/spaghetti.jpg',
 ('Spaghetti',
 'Olive Oil',
 'Onions',
@@ -790,10 +795,10 @@
 'Pepper',
 'Basil'),
 ('Francesca', 'Joaquin'),
-'Italian'
+'Italian'),
 
-'Spicy Tomato and Carrot Soup with Yogurt and Pistachio Dumplings',
-'https://lfuen.github.io/laCarte/meals/spicyTomato.html',
+('Spicy Tomato and Carrot Soup with Yogurt and Pistachio Dumplings',
+'https://lfuen.github.io/laCarte/images/meals/spicyTomato.jpg',
 ('Ras el Hanout',
 'Yogurt',
 'Olive Oil',
@@ -806,10 +811,10 @@
 'Pistachios',
 'Chili Strips'),
 ('Johnathan', 'Francesca', 'Joaquin', 'Madelyn'),
-'Greek'
+'Greek'),
 
-'Spinach Quiche',
-'https://lfuen.github.io/laCarte/meals/spinachQuiche.html',
+('Spinach Quiche',
+'https://lfuen.github.io/laCarte/images/meals/spinachQuiche.jpg',
 ('Salt',
 'Butter',
 'Eggs',
@@ -821,10 +826,10 @@
 'Leeks',
 'Nutmeg'),
 ('Joaquin', 'Christian'),
-'Spanish'
+'Spanish'),
 
-'Squash Gnocchi with Butter and Sage',
-'https://lfuen.github.io/laCarte/meals/squashGnocchi.html',
+('Squash Gnocchi with Butter and Sage',
+'https://lfuen.github.io/laCarte/images/meals/squashGnocchi.jpg',
 ('Potatoes',
 'Muscat Squash',
 'Nutmeg',
@@ -836,10 +841,10 @@
 'Sage',
 'Garlic'),
 ('Francesca', 'Joaquin'),
-'Italian'
+'Italian'),
 
-'Tandoori Duck',
-'https://lfuen.github.io/laCarte/meals/tandoori.html',
+('Tandoori Duck',
+'https://lfuen.github.io/laCarte/images/meals/tandoori.jpg',
 ('Duck',
 'Yogurt',
 'Apple Vinegar',
@@ -854,10 +859,10 @@
 'Ginger',
 'Lemon'),
 ('Johnathan',  'Christian', 'Madelyn'),
-'Indian'
+'Indian'),
 
-'Thai Spring Rolls',
-'https://lfuen.github.io/laCarte/meals/thaiRolls.html',
+('Thai Spring Rolls',
+'https://lfuen.github.io/laCarte/images/meals/thaiRolls.jpg',
 ('Noodles',
 'Carrot',
 'Cabbage',
@@ -871,10 +876,10 @@
 'Eggs',
 'Thai Sweet Chili Dip'),
 ('Johnathan', 'Joaquin', 'Christian', 'Madelyn'),
-'Thai'
+'Thai'),
 
-'Tomato Soup with Goat Cheese Gnudi',
-'https://lfuen.github.io/laCarte/meals/tomatoGoat.html',
+('Tomato Soup with Goat Cheese Gnudi',
+'https://lfuen.github.io/laCarte/images/meals/tomatoGoat.jpg',
 ('Extra-Virgin Olive Oil',
 'Butter',
 'Onions',
@@ -894,10 +899,10 @@
 'Flour',
 'Basil'),
 ('Francesca', 'Joaquin'),
-'Italian'
+'Italian'),
 
-'Traditional Falafel',
-'https://lfuen.github.io/laCarte/meals/falafel.html',
+('Traditional Falafel',
+'https://lfuen.github.io/laCarte/images/meals/falafel.jpg',
 ('Chickpeas',
 'Garlic',
 'Onions',
@@ -909,10 +914,10 @@
 'Black Pepper',
 'Oil'),	
 ('Johnathan', 'Joaquin', 'Christian'),	
-'Middle Eastern'
+'Middle Eastern'),
 
-'Tuna and Negi Sushi Roll',
-'https://lfuen.github.io/laCarte/meals/tunaSushi.html',
+('Tuna and Negi Sushi Roll',
+'https://lfuen.github.io/laCarte/images/meals/tunaSushi.jpg',
 ('Rice',
 'Kombu',
 'Vinegar',
@@ -921,10 +926,10 @@
 'Fresh Tuna',
 'Negi'), 
 ('Johnathan', 'Francesca', 'Christian', 'Madelyn'),
-'Asian'
+'Asian'),
 
-'Turkey Burger',
-'https://lfuen.github.io/laCarte/meals/turkeyBurger.html',
+('Turkey Burger',
+'https://lfuen.github.io/laCarte/images/meals/turkeyBurger.jpg',
 ('Oil',
 'Onions',
 'Mushrooms',
@@ -934,10 +939,10 @@
 'Lettuce',
 'Cranberries'),
 ('Johnathan', 'Christian', 'Madelyn'),
-'American'
+'American'),
 
-'Wonton Soup',
-'https://lfuen.github.io/laCarte/meals/wonton.html',
+('Wonton Soup',
+'https://lfuen.github.io/laCarte/images/meals/wonton.jpg',
 ('Wonton Wrappers',
 'Ginger',
 'Garlic',
@@ -953,4 +958,6 @@
 'Rice Vinegar',       
 'Sichuan Peppers'),	
 ('Johnathan', 'Francesca', 'Christian','Madelyn'),	
-'Asian'
+'Asian');
+
+COMMIT;

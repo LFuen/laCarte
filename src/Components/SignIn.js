@@ -8,9 +8,13 @@ class SignIn extends Component{
             <div className="main">
                 <p className="sign" align="center">Sign in</p>
                 <form className="form1">
-                    <input className="un" type="text" placeholder="Username" required/>
-                    <input className="pass" type="password" placeholder="Password" required/>
-                    <button type="submit" formAction='/MealChoose' className='signIn'>Sign in</button>
+                    <label>Username
+                        <input className="un" type="text" required/>
+                    </label>
+                    <label>Password
+                        <input className="pass" type="password" required/>
+                    </label>
+                    <button type="submit" formAction='/MealChoose' className='shadow'>Sign in</button>
                 </form>
             </div>
         )

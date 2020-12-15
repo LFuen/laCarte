@@ -25,8 +25,10 @@ class MealChoose extends Component{
                 </div>
 
                 <div className='option'>
-                    <h2>Search By Ingredient(s):</h2>
-                    <input type='text' placeholder='Chicken, tomatoes, etc.'/>
+                    <label>Search By Ingredient(s):
+                        <input type='text' placeholder='Chicken, tomatoes, etc.'/>
+                    </label>
+                    
                 </div>
 
                 <div className='option'>

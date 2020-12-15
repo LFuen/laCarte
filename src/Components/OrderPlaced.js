@@ -4,9 +4,9 @@ class OrderPlaced extends Component{
     render(){
         return(
             <div>
-                <a href='/OrderForm'><button type="button">Schedule Next Meal</button></a>
+                <a href='/MealChoose'><button type="button" className='shadow'>Schedule Next Meal</button></a>
                 <span title="Received"><img className="order" alt="orderReceived" src="https://lfuen.github.io/laCarte/images/Order.png"/></span>
-                <a href='/OrderPlaced'><button type="button">Sign Out</button></a>
+                <a href='/OrderPlaced'><button type="button" className='shadow'>Sign Out</button></a>
             </div>
         )
     }

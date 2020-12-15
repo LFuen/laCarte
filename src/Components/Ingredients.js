@@ -1,35 +1,44 @@
 import React, {Component} from 'react'
 import '../css/Ingredients.css'
+import meals from './mockData'
 
 class Ingredients extends Component{
-    // constructor(props){
-    //     super(props)
-    // }
+    constructor(){
+        super()
+
+        this.state = {
+            meals: meals
+        }
+    }
 
     render(){
         return(
             <div>
-                <h1>Argentinian Veal Cutlets with Vegatables</h1> {/*use props for meal name*/}
+                <h1>{meals[0].meal_name}</h1> {/*use props for meal name*/}
                 <h2>Ingredients:</h2>
-                <ul>
-                    <li>Argentinian Veal Cutlets</li>   {/*use props for meal ingredients*/}
-                    <li>Green Peppers</li>
-                    <li>Red Peppers</li>
-                    <li>Tomatoes</li>
-                    <li>Onions</li>
-                    <li>Salt</li>
-                    <li>Ground Pepper</li>
-                    <li>Corn Oil</li>
-                </ul>
-                
+                <p>{meals[0].ingredients}</p>
+                <br/>
                     <h2>Chefs</h2>             {/*use props for chefs name*/}
                 <div className='chefs'>
                     <p>Choose a chef:</p>
-                    <a href='/ChefBio'>Johnathan</a>      
-                    <a href='/ChefBio'>Francesca</a>
-                    <a href='/ChefBio'>Joaquin</a>
+                    <label>
+                        <input type="radio" value="chef" required/>
+                            {meals[0].chef[0]}
+                    </label>  
+                    <label>
+                        <input type="radio" value="chef"/>
+                            {meals[0].chef[1]}
+                    </label>
+                    <label>
+                        <input type="radio" value="chef"/>
+                            {meals[0].chef[2]}
+                    </label>
+                    <label>
+                        <input type="radio" value="chef"/>
+                            {meals[0].chef[3]}
+                    </label>
                 </div>
-                <a href='/OrderForm'><button type="button">Order</button></a>
+                <a href='/OrderForm'><button type="submit" className='shadow'>Order</button></a>
             </div>
         )
     }

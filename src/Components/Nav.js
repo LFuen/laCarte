@@ -13,6 +13,7 @@ import Cuisine from './Cuisine'
 import Ingredients from './Ingredients'
 import OrderPlaced from './OrderPlaced'
 import SignIn from './SignIn'
+import Welcome from './Welcome'
 
 
 
@@ -21,7 +22,7 @@ class Nav extends Component {
         return(
             <BrowserRouter>
             <nav className='navigation' id="navbar">
-                <NavLink to='/'>Home</NavLink>
+                <NavLink to='/Welcome'>Home</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
                 <NavLink to='/MealList'>Meals</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
@@ -30,6 +31,7 @@ class Nav extends Component {
                 <NavLink to='/About'>About</NavLink>
             </nav>
             <Route exact path='/' component={Home}/>
+            <Route exact path='/Welcome' component={Welcome}/>
             <Route exact path='/MealList' component={MealList}/>
             <Route exact path='/Chefs' component={Chefs}/>
             <Route exact path='/About' component={About}/>

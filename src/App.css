@@ -31,6 +31,21 @@
   }
 }
 
+a {
+  color:rgb(0, 0, 0);
+  font-size: 40px;
+}
+
+a:hover,
+a:focus {
+    color: rgb(233, 111, 111);
+    text-shadow: 2px 2px rgb(87, 87, 87);
+    background-size: 100%;
+    border-radius: 50px;
+    width: fit-content;
+    height: fit-content;
+}
+
 /* 
 ========================================
   SCROLLBAR
@@ -55,11 +70,11 @@
   border-radius: 10px;
 }
 
-/* Standard stuff, if you care to do that.
+/* Standard stuff, if you care to do that. */
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-} */
+}
 
 .side-scroll {
   display: flex;
