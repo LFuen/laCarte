@@ -14,6 +14,7 @@ import Ingredients from './Ingredients'
 import OrderPlaced from './OrderPlaced'
 import SignIn from './SignIn'
 import Welcome from './Welcome'
+import ChefBio from './ChefBio'
 
 
 
@@ -34,6 +35,7 @@ class Nav extends Component {
             <Route exact path='/Welcome' component={Welcome}/>
             <Route exact path='/MealList' component={MealList}/>
             <Route exact path='/Chefs' component={Chefs}/>
+            <Route exact path='/ChefBio' component={ChefBio}/>
             <Route exact path='/About' component={About}/>
             <Route exact path='/MealPlan' component={MealPlan}/>
             <Route exact path='/SignUp' component={SignUp}/>

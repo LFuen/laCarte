@@ -46,6 +46,7 @@ class MealPlan extends Component {
                     </ul>
                 </div>
                 </div>
+                <a href='/Welcome'><button className='shadow' name="cancel" value="Cancel">Cancel</button></a>
             </div>
         )
     }

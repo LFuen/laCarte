@@ -7,7 +7,7 @@ class ChefBio extends Component {
             <div>
                 <h1>Chef Christian</h1>     {/*use props for chef name*/}
                 <br/>
-                <img src=''/>       {/*use props for chef image*/}
+                <img src='' alt=''/>       {/* use props for chef image */}
                 <br/>
                 <p className='bio'>Biography will go here.</p>     {/*use props for chef bio*/}
                 <br/>

@@ -18,12 +18,23 @@ class MealList extends Component {
 
     render() {
         return (
-            <div>
-                {/* {this.state.meals.map((meal, index) => (
-                    <h4 key={index}> {meal.name}</h4>  
-                ))} */}
-                {/* <span title="Food"><img className="meal" alt="argVeal" src="https://lfuen.github.io/laCarte/images/meals/argVeal.jpg"/></span> */}
-                {<p>{meals[0].meal_name}</p>}
+            <div className='mealList'>
+                <a href='/Ingredients'><div className='polaroid'>
+                    <span title="La Carte"><img className="chefMoji" alt="argVeal" src="https://lfuen.github.io/laCarte/images/meals/orzo.jpg"/></span>
+                    {/* {this.state.meals.map((meal, index) => (
+                        <h4 key={index}> {meal.name}</h4>  
+                    ))} */}
+                    {/* <span title="Food"><img className="meal" alt="argVeal" src="https://lfuen.github.io/laCarte/images/meals/argVeal.jpg"/></span> */}
+                    <div className='container'>{<p>{meals[0].meal_name}</p>}</div>
+                </div></a>
+                <a href='/Ingredients'><div className='polaroid'>
+                    <span title="La Carte"><img className="chefMoji" alt="bibimbap" src="https://lfuen.github.io/laCarte/images/meals/bibimbap.jpg"/></span>
+                    <div className='container'>{<p>{meals[1].meal_name}</p>}</div>
+                </div></a>
+                <a href='/Ingredients'><div className='polaroid'>
+                    <span title="La Carte"><img className="chefMoji" alt="argVeal" src="https://lfuen.github.io/laCarte/images/meals/butterChicken.jpg"/></span>
+                    <div className='container'>{<p>{meals[2].meal_name}</p>}</div>
+                </div></a>
             </div>
         )
     }

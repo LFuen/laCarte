@@ -25,8 +25,11 @@ class SignUp extends Component {
                     <label>Confirm Password<br/>
                         <input type="password" name="password2" placeholder="Retype password" />
                     </label>
+                    <p>Subscription Selected:</p>
                     </div>
-                    <a href='/MealChoose'><button className='shadow' type="submit" name="signup_submit" value="Sign me up">Sign Up</button></a>
+                    <a href='/MealPlan'><button className='shadow' name="back" value="cancel">Change</button></a>
+                    <div className='spacing'/>
+                    <a href='/MealChoose'><button className='shadow' name="signup_submit" value="Sign me up">Sign Up</button></a>
                 </div>
             </div>
         )

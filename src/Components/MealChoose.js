@@ -34,11 +34,11 @@ class MealChoose extends Component{
                 <div className='option'>
 
                     <h2>Chef:</h2>
-                    <a href='/Chefs'><h3>Johnathan</h3></a>
-                    <a href='/Chefs'><h3>Francesca</h3></a>
-                    <a href='/Chefs'><h3>Joaquin</h3></a>
-                    <a href='/Chefs'><h3>Christian</h3></a>
-                    <a href='/Chefs'><h3>Madelyn</h3></a>
+                    <a href='/ChefBio'><h3>Johnathan</h3></a>
+                    <a href='/ChefBio'><h3>Francesca</h3></a>
+                    <a href='/ChefBio'><h3>Joaquin</h3></a>
+                    <a href='/ChefBio'><h3>Christian</h3></a>
+                    <a href='/ChefBio'><h3>Madelyn</h3></a>
 
                 </div>
             </div>
