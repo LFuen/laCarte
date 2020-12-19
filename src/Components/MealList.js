@@ -2,20 +2,12 @@ import React, {Component} from 'react'
 import '../css/MealList.css'
 import meals from './mockData'  // this info comes from DB/API and NOT from js
 
-
 // a higher file... maybe like App.js, you will setup the API base routes...
 // you will do a request to the API, to get the list of meals with all its contents
 // you can potentially pass this down through parent component as props, or you can use context
 // response you're going to get back, will look pretty much identical to the mockMeals array (JSON)
 
 class MealList extends Component {
-    constructor() {
-        super()
-        this.state = {
-            meals: meals
-        }
-    }
-
     render() {
         return (
             <div className='mealList'>

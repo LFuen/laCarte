@@ -44,5 +44,14 @@ class Ingredients extends Component{
     }
 }
 
+/*
+CHEFS
+ID, NAME, FIELD1, FIELD2
 
+ORDERS
+ID, PRIM_ADDRESS, SEC_ADDRESS, CITY, STATE, ZIP, PHONE, CHEF_ID
+
+MEALS
+ID, FIELD1, FIELD2, Array<Chef_ID>
+*/
 export default Ingredients
