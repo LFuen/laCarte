@@ -1,7 +1,64 @@
-p {
+h1.aboutTitle{
+    margin: 0 0 0 0;
+    font-size: 40px;
+}
+
+p.aboutPara {
     font-size: 20px;
     font-family: 'Sacramento', cursive;
     font-family: 'Special Elite', cursive;
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+p.quote {
+    line-height: 1.4em;
+    font-size: 40px;
+}
+
+.quote {
+    position: relative;
+    letter-spacing: .03em;
+    margin-bottom: .5rem;
+}
+
+.quote:before {
+        content: "“";
+        position: absolute;
+        left: -.7em;
+}
+    
+.quote:after {
+        content: "”";
+        margin-right: -1rem;
+}
+
+.quote--container {
+    margin: 4.5rem auto 0;
+    width: 30em;
+    border-bottom: 2px dotted #C6D1BF;
+    padding-bottom: .5rem;
+}
+
+.quote--highlight {
+    color: #D24335;
+}
+
+.quote--author {
+    font-family: 'Open Sans Condensed';
+    font-size: .8rem;
+    text-align: right;
+    font-weight: 300;
+}
+
+.about{
+    width: 75%;
+    margin: 1.5rem auto 0;
 }
