@@ -28,6 +28,7 @@ class MealChoose extends Component{
                     <label>Search By Ingredient(s):
                         <input type='text' placeholder='Chicken, tomatoes, etc.'/>
                     </label>
+                    <span title="Dinner is Served!"><img className="mainImage" alt="served" src="https://lfuen.github.io/laCarte/images/served.png"/></span> 
                     
                 </div>
 
