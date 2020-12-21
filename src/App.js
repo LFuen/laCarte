@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Nav from './Components/Nav';
 import './App.css';
 import Footer from './Components/Footer';
-import API_ENDPOINT from './config';
+import api from './config';
 import LaCarteContext from './context/LaCarteContext.js';
 class App extends Component {
 
@@ -12,7 +12,7 @@ class App extends Component {
 
   componentDidMount() {
     Promise.all([
-      fetch(`${API_ENDPOINT}/api/meals`, {
+      fetch(`${api.API_ENDPOINT}/api/meals`, {
         method: 'GET',
         headers: {
           Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
