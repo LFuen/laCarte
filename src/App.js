@@ -7,10 +7,17 @@ import LaCarteContext from './context/LaCarteContext.js';
 class App extends Component {
 
   state = {
-    meals: []
+    meals: [],
+    chefs: []
   }
 
   componentDidMount() {
+    this.getMeals();
+    this.getChefs();
+  }
+
+
+  getMeals(){
     Promise.all([
       fetch(`${api.API_ENDPOINT}/api/meals`, {
         method: 'GET',
@@ -20,13 +27,6 @@ class App extends Component {
       })
     ])
     .then(([mealsResponse]) => {
-
-      /*
-        RESPONSE OBJECT:
-        STATUS CODE: 200
-        DATA: "FSLKDFKJSDFJHKSJKHDGFJIKSODFKSDKFJLSKLJDFLKJSDF"
-      */
-
       return Promise.all([mealsResponse.json()])
     })
     .then(([meals]) => {
@@ -34,13 +34,32 @@ class App extends Component {
     });
   }
 
+  getChefs(){
+
+    Promise.all([
+      fetch(`${api.API_ENDPOINT}/api/chefs`, {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
+        }
+      })
+    ])
+    .then(([chefsResponse]) => {
+      return Promise.all([chefsResponse.json()])
+    })
+    .then(([chefs]) => {
+      this.setState({ chefs});
+    });
+  }
+
   render(){
     const value = {
-      meals: this.state.meals
+      meals: this.state.meals,
+      chefs: this.state.chefs
     };
-
-    console.log(`LACARTECONTEXT STATE`);
-    console.log(value);
+    console.log(value)
+    
+    
     return (
     <LaCarteContext.Provider value={value}>
     <div className="App">
