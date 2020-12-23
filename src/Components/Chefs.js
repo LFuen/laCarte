@@ -22,7 +22,7 @@ class Chefs extends Component {
                         </div>
                         <div className='box'>  
                         {chefs.map(chef => { return (
-                        <a href='/ChefBio'><h4>{chef.chef_name}</h4></a>
+                        <a href={`/chefs/${chef.chef_name}`} key={chef.id}><h4>{chef.chef_name}</h4></a>
                         )})}
                         </div>
                     </section>

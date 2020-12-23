@@ -1,39 +1,41 @@
 import React, {Component} from 'react'
+import LaCarteContext from '../context/LaCarteContext'
 import '../css/Cuisine.css'
-import meals from './mockData'
+
 
 class Cuisine extends Component{
-    constructor(){
-        super()
 
-        this.state = {
-            meals: meals
+    static defaultProps = {
+        match: {
+            params: {}
         }
     }
 
+    static contextType = LaCarteContext;
+
     render(){
+
+        const {meals, cuisines} = this.context;
+        const originParameter = this.props.match.params.origin;
+        const cuisineOrg = cuisines.length > 0 ? cuisines.find(cuisine => cuisine.origin === originParameter) : '';
+        const cuisineMeals = meals.filter(meal => meal.cuisine_id === cuisineOrg.id);
+
+        if(cuisineOrg && cuisineMeals.length > 0){
         return(
             <div>
                 <br/>
-                <h1>{meals[0].origin} Dishes</h1>   {/*use props for cuisine name*/}
+                <h1>{cuisineOrg.origin} Dishes</h1>
                 <br/>
-                <a href='/Ingredients'>{meals[0].meal_name}</a>
+                {cuisineMeals.map(meal => {
+                    return (<a href={`/meals/${meal.id}`} key={meal.id}>{meal.meal_name}</a>)
+                })}
+                
                 <br/>
-                <a href='/Ingredients'>{meals[1].meal_name}</a>      {/*use props for meal names*/}
-                <br/>
-                <a href='/Ingredients'>Wonton Soup</a>
-                <br/>
-                <a href='/Ingredients'>Tuna and Negi Sushi Roll</a>
-                <br/>
-                <a href='/Ingredients'>Salmon Maki Sushi</a>
-                <br/>
-                <a href='/Ingredients'>Miso Soup with Tofu, Bean Sprouts, and Herbs</a>
-                <br/>
-                <a href='/Ingredients'>Korean Kimchi</a>
-                <br/>
-                <a href='/Ingredients'>Bibimbap</a>
             </div>
         )
+        } else {
+            return (<h3>Sorry, we don't offer that dish just yet!</h3>)
+        }
     }
 }
 

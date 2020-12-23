@@ -68,6 +68,11 @@
   font-size: 18px;
 }
 
+.shadow a {
+  padding: 20px;
+  padding-right: 30px;
+}
+
 @media only screen and (max-width: 600px) {
   .columns {
     width: 100%;

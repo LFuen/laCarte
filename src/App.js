@@ -8,12 +8,14 @@ class App extends Component {
 
   state = {
     meals: [],
-    chefs: []
+    chefs: [], 
+    cuisines: []
   }
 
   componentDidMount() {
     this.getMeals();
     this.getChefs();
+    this.getCuisines();
   }
 
 
@@ -27,10 +29,11 @@ class App extends Component {
       })
     ])
     .then(([mealsResponse]) => {
-      return Promise.all([mealsResponse.json()])
+      return Promise.all([mealsResponse.json()]);
     })
     .then(([meals]) => {
-      this.setState({ meals});
+      
+      this.setState({meals});
     });
   }
 
@@ -48,14 +51,32 @@ class App extends Component {
       return Promise.all([chefsResponse.json()])
     })
     .then(([chefs]) => {
-      this.setState({ chefs});
+      this.setState({chefs});
+    });
+  }
+
+  getCuisines(){
+    Promise.all([
+      fetch(`${api.API_ENDPOINT}/api/cuisines`, {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
+        }
+      })
+    ])
+    .then(([cuisinesResponse]) => {
+      return Promise.all([cuisinesResponse.json()])
+    })
+    .then(([cuisines]) => {
+      this.setState({cuisines});
     });
   }
 
   render(){
     const value = {
       meals: this.state.meals,
-      chefs: this.state.chefs
+      chefs: this.state.chefs,
+      cuisines: this.state.cuisines,
     };
     console.log(value)
     

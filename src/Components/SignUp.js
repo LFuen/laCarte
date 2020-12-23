@@ -25,7 +25,7 @@ class SignUp extends Component {
                     <label>Confirm Password<br/>
                         <input type="password" name="password2" placeholder="Retype password" />
                     </label>
-                    <p>Subscription Selected:</p>
+
                     </div>
                     <a href='/MealPlan'><button className='shadow' name="back" value="cancel">Change</button></a>
                     <div className='spacing'/>

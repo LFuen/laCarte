@@ -15,11 +15,16 @@ import OrderPlaced from './OrderPlaced'
 import SignIn from './SignIn'
 import Welcome from './Welcome'
 import ChefBio from './ChefBio'
+import LaCarteContext from '../context/LaCarteContext'
 
 
 
 class Nav extends Component {
+
+    static contextType = LaCarteContext;
+
     render() {
+
         return(
             <BrowserRouter>
             <nav className='navigation' id="navbar">
@@ -35,14 +40,14 @@ class Nav extends Component {
             <Route exact path='/Welcome' component={Welcome}/>
             <Route exact path='/MealList' component={MealList}/>
             <Route exact path='/Chefs' component={Chefs}/>
-            <Route exact path='/ChefBio' component={ChefBio}/>
+            <Route exact path='/chefs/:chef' component={ChefBio}/>
             <Route exact path='/About' component={About}/>
             <Route exact path='/MealPlan' component={MealPlan}/>
             <Route exact path='/SignUp' component={SignUp}/>
             <Route exact path='/MealChoose' component={MealChoose}/>
             <Route exact path='/OrderForm' component={OrderForm}/>
-            <Route exact path='/Cuisine' component={Cuisine}/>
-            <Route exact path='/Ingredients' component={Ingredients}/>
+            <Route exact path='/cuisines/:origin' component={Cuisine}/>
+            <Route exact path='/meals/:id' component={Ingredients}/>
             <Route exact path='/OrderPlaced' component={OrderPlaced}/>
             <Route exact path='/SignIn' component={SignIn}/>
             </BrowserRouter>

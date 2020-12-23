@@ -19,7 +19,6 @@ class MealPlan extends Component {
                         <li>10 Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
                         <li>`Free Delivery (Driver Tip Not Included)`</li>
-                        <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
                     </ul>
                 </div>
 
@@ -30,7 +29,6 @@ class MealPlan extends Component {
                         <li>20 Meals</li>
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
                         <li>`Free Delivery (Driver Tip Not Included)`</li>
-                        <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
                     </ul>
                 </div>
 
@@ -42,11 +40,13 @@ class MealPlan extends Component {
                         <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
                         <li>`Free Delivery (Driver Tip Not Included)`</li>
                         <li>`<b>NO</b> cancellation fee (Up tp two hours before)`</li>
-                        <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
                     </ul>
                 </div>
                 </div>
+
                 <a href='/Welcome'><button className='shadow' name="cancel" value="Cancel">Cancel</button></a>
+                <a href='/SignUp'><button className='shadow' name="signUp" value="SignUp">Sign Up</button></a>                     
+
             </div>
         )
     }
@@ -58,3 +58,15 @@ export default MealPlan
 
 
 // transitioning effect : https://blog.bitsrc.io/how-to-implement-smooth-transitions-in-react-bd0497b06b8
+
+            //  <div className='mealBox'>
+            //     <div className='columns'>
+            //         <ul className='price'>
+            //             <li className='header'>Late Nights</li>
+            //             <li className='grey'>$ 300.00 / Month</li>
+            //             <li>10 Meals</li>
+            //             <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
+            //             <li>`Free Delivery (Driver Tip Not Included)`</li>
+            //             <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
+            //         </ul>
+            //     </div>

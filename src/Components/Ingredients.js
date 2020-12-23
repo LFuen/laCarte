@@ -1,57 +1,47 @@
 import React, {Component} from 'react'
 import '../css/Ingredients.css'
-import meals from './mockData'
+import LaCarteContext from '../context/LaCarteContext';
 
 class Ingredients extends Component{
-    constructor(){
-        super()
-
-        this.state = {
-            meals: meals
+    
+    static defaultProps = {
+        match: {
+            params: {}
         }
     }
+    static contextType = LaCarteContext;
 
     render(){
-        return(
+        const {meals} = this.context
+        const ingID = this.props.match.params.id
+        const ingr = meals.length ? meals.find(ing => ing.id === Number(ingID)) : ''
+        // GET INDIVIDUAL ITEMS FOR INGREDIENTS AND INDIVIDUAL CHEFS FOR RADIO BUTTONS
+
+        if (ingr) {
+            return (
             <div>
-                <h1>{meals[0].meal_name}</h1> {/*use props for meal name*/}
+                <div>
+                <h1>{ingr.meal_name}</h1>
                 <h2>Ingredients:</h2>
-                <p>{meals[0].ingredients}</p>
+                <p>{ingr.ingredients}</p>
                 <br/>
-                    <h2>Chefs</h2>             {/*use props for chefs name*/}
+                    <h2>Chefs</h2>             
                 <div className='chefs'>
-                    <p>Choose a chef:</p>
+                    <p>Choose a chef:</p>                
                     <label>
+
                         <input type="radio" value="chef" required/>
-                            {meals[0].chef[0]}
-                    </label>  
-                    <label>
-                        <input type="radio" value="chef"/>
-                            {meals[0].chef[1]}
-                    </label>
-                    <label>
-                        <input type="radio" value="chef"/>
-                            {meals[0].chef[2]}
-                    </label>
-                    <label>
-                        <input type="radio" value="chef"/>
-                            {meals[0].chef[3]}
-                    </label>
+                        {ingr.chef.split(',')[0]}
+                    </label> 
+                </div>
                 </div>
                 <a href='/OrderForm'><button type="submit" className='shadow'>Order</button></a>
-            </div>
-        )
+            </div>)
+        } else {
+            return (<h3>Sorry, we don't cook that yet!</h3>)
+        }
     }
 }
 
-/*
-CHEFS
-ID, NAME, FIELD1, FIELD2
-
-ORDERS
-ID, PRIM_ADDRESS, SEC_ADDRESS, CITY, STATE, ZIP, PHONE, CHEF_ID
-
-MEALS
-ID, FIELD1, FIELD2, Array<Chef_ID>
-*/
 export default Ingredients
+
