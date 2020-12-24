@@ -9,9 +9,7 @@ class cuisineChoose extends Component{
 
     render(){
 
-        const {cuisines} = this.context
-        const {chefs} = this.context
-
+        const {cuisines, chefs} = this.context
 
         if(cuisines)
         return(

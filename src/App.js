@@ -9,15 +9,48 @@ class App extends Component {
   state = {
     meals: [],
     chefs: [], 
-    cuisines: []
+    cuisines: [],
+    orders: [],
+    error: null
   }
 
-  componentDidMount() {
-    this.getMeals();
-    this.getChefs();
-    this.getCuisines();
+
+// =========================
+//       FOR THE ORDERS
+// =========================
+
+  setOrders = orders => {
+    this.setState({
+      orders, 
+      error: null
+    })
   }
 
+  addOrder = order => {
+    this.setState({
+      orders: [ ...this.state.orders, order ]
+    })
+  }
+
+  deleteOrder = orderId => {
+    const newOrder = this.state.orders.filter(order =>
+      order.id !== orderId
+    )
+    this.setState({
+      orders: newOrder
+    })
+  }
+
+  updateOrder = updatedOrder => {
+    this.setState({
+      orders: this.state.orders.map(order =>
+        (order.id !== updatedOrder.id) ? order : updatedOrder)
+    })
+  }
+
+// =========================
+//       FOR THE ORDERS
+// =========================
 
   getMeals(){
     Promise.all([
@@ -72,11 +105,44 @@ class App extends Component {
     });
   }
 
+  getOrders(){
+    Promise.all([
+      fetch(`${api.API_ENDPOINT}/api/orders`, {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
+        }
+      })
+    ])
+    .then(([ordersResponse]) => {
+      return Promise.all([ordersResponse.json()])
+    })
+    .then(([orders]) => {
+      this.setState({orders});
+    });
+  }
+
+
+
+  componentDidMount() {
+    this.getMeals();
+    this.getChefs();
+    this.getCuisines();
+    this.getOrders();
+  }
+
+
+
+
   render(){
     const value = {
       meals: this.state.meals,
       chefs: this.state.chefs,
       cuisines: this.state.cuisines,
+      orders: this.state.orders,
+      addOrder: this.addOrder,
+      updateOrder: this.updateOrder,
+      deleteOrder: this.deleteOrder,
     };
     console.log(value)
     

@@ -16,6 +16,8 @@ import SignIn from './SignIn'
 import Welcome from './Welcome'
 import ChefBio from './ChefBio'
 import LaCarteContext from '../context/LaCarteContext'
+import OrderHistory from './OrderHistory'
+import OrderEdit from './OrderEdit'
 
 
 
@@ -45,10 +47,12 @@ class Nav extends Component {
             <Route exact path='/MealPlan' component={MealPlan}/>
             <Route exact path='/SignUp' component={SignUp}/>
             <Route exact path='/MealChoose' component={MealChoose}/>
-            <Route exact path='/OrderForm' component={OrderForm}/>
+            <Route exact path='/orders/:id' component={OrderForm}/>
             <Route exact path='/cuisines/:origin' component={Cuisine}/>
             <Route exact path='/meals/:id' component={Ingredients}/>
             <Route exact path='/OrderPlaced' component={OrderPlaced}/>
+            <Route exact path='/orders/:id/:meal' component={OrderHistory}/>
+            {/* <Route exact path='/orders/:id' component={OrderEdit}/> */}
             <Route exact path='/SignIn' component={SignIn}/>
             </BrowserRouter>
         )

@@ -5,4 +5,8 @@ export default React.createContext({
     meals: [],
     chefs: [],
     cuisines: [],
+    orders: [],
+    addOrder: () => {},
+    updateOrder: () => {},
+    deleteOrder: () => {},
 });

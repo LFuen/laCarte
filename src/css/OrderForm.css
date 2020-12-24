@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
 .container{
-  width: 50%;
+  display: flex;
   align-self: center;
 }
 
@@ -11,9 +11,9 @@ button.shadow:focus {
   border: 3px solid rgb(0, 0, 0);
 }
 
-.d-flex{
-  display: flex;
-  justify-self: center;
+div.d-flex{
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background:rgb(233, 111, 111);
   border-radius: 35px;
@@ -21,11 +21,12 @@ button.shadow:focus {
   color:rgb(255, 255, 255); 
   text-shadow: 2px 2px rgb(80, 80, 80);
 }
-form{
+
+.orderForm {
   flex: 4;
   flex-direction: column;
-  align-self: center;
-  width: 75%;
+  justify-content: center;
+  width: 100%;
 }
 
 .title{
@@ -41,6 +42,7 @@ form{
   padding: 20px;
   color:rgb(255, 255, 255);
   text-shadow: 2px 2px rgb(80, 80, 80);
+  width: 60%;
 }
 h2{
   margin: 0;
@@ -58,7 +60,9 @@ label>span{
   margin-top: 12px;
   padding-right: 10px;
 }
-form.input[type="text"], input[type='tel'], select
+
+
+form input
 {
   text-align: center;
   width: 70%;
@@ -66,9 +70,11 @@ form.input[type="text"], input[type='tel'], select
   padding: 5px 15px;
   margin-bottom: 10px;
   border: 1px solid #6d6d6d;
+  border-radius: 20px;
   color: rgb(255, 255, 255);
   background-color: black;
 }
+
 select{
   width: 72%;
   height: 45px;
