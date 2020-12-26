@@ -29,7 +29,7 @@ class OrderForm extends Component{
                     <div className="d-flex">
                     <form action="" method="" className='orderForm'>
                         <label>
-                        <h3>Order: {order.meal_name}</h3>
+                        <h3>{order.meal_name}</h3>
                         <span>Street Address *</span><br/>
                         <input type="text" name="houseadd" placeholder="House number and street name" required/>
                         </label>
@@ -53,6 +53,7 @@ class OrderForm extends Component{
                         <span>Phone *</span><br/>
                         <input type="tel" name="tel" placeholder='(000) 000-000'/> 
                         </label>
+                        <a href='/MealChoose'><button type="button" className='shadow'>Change Meal</button></a>
                         <a href='/OrderPlaced'><button type="button" className='shadow'>Place Order</button></a>
                     </form>
                 </div>

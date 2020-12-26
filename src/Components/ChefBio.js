@@ -19,13 +19,14 @@ class ChefBio extends Component {
         const individual = chefs.length > 0 ? chefs.find(chef => chef.chef_name === chefParam) : '';
         console.log(individual.schedule)
 
-        // let cuisines = individual.cuisine.substring(1)
-        // let cuisines = cuisines.slice(0, -1)
-        // let cuisine = cuisines.split(',')
+    if(chefs.length > 0) {
+        let cuisines = individual.cuisine.substring(1)
+        cuisines = cuisines.slice(0, -1)
+        let cuisine = cuisines.split(',')
 
-        // let schedules = individual.schedule.substring(1)
-        // let schedules = schedules.slice(0, -1)
-        // let schedule = schedules.split(',')
+        let schedules = individual.schedule.substring(1)
+        schedules = schedules.slice(0, -1)
+        let schedule = schedules.split(',')
 
         if(individual) {
         return (
@@ -36,22 +37,25 @@ class ChefBio extends Component {
                 <br/>
                 <p className='bio'>{individual.bio}</p>
                 <br/>
-                <h3>Cuisines :</h3>
-                {/* {cuisine.map(origin => { return (
+                <h3>Cuisines</h3>
+                {cuisine.map(origin => { return (
                 <p className='cuisine'>{origin}</p>                    
-                )})} */}
+                )})}
 
                 <br/>
-                <h3>Schedule :</h3>
-                {/* {schedule.map(days => { return (
+                <h3>Schedule</h3>
+                {schedule.map(days => { return (
                 <p className='schedule'>{days}</p>                    
-                )})} */}
+                )})}
                 </div>
             </div>
         )            
         } else {
             return (<h3>Sorry, that chef doesn't work here!</h3>)
         }
+    } else {
+        return (<h3> Loading... </h3>)
+    }
 
     }
 }
