@@ -20,18 +20,33 @@ class ChefBio extends Component {
         const name = meals.filter(meal => meal.chef === individual.id);
         console.log(individual.schedule)
 
+        let cuisines = individual.cuisine.substring(1)
+        cuisines = cuisines.slice(0, -1)
+        let cuisine = cuisines.split(',')
+
+        let schedules = individual.schedule.substring(1)
+        schedules = schedules.slice(0, -1)
+        let schedule = schedules.split(',')
+
         if(individual) {
         return (
-            <div>
-                <h1>Chef {individual.chef_name}</h1>     {/*use props for chef name*/}
+            <div className='chefBio'>
+                <h1>Chef {individual.chef_name}</h1>
                 <br/>
-                <img src='' alt=''/>       {/* use props for chef image */}
+                <img src='' alt=''/>       
                 <br/>
-                <p className='bio'>{individual.bio}</p>     {/*use props for chef bio*/}
+                <p className='bio'>{individual.bio}</p>
                 <br/>
-                <p className='cuisine'>Cuisines: {individual.cuisine}</p>      {/*use props for chef cuisine*/}
+                <h3>Cuisines :</h3>
+                {cuisine.map(origin => { return (
+                <p className='cuisine'>{origin}</p>                    
+                )})}
+
                 <br/>
-                <p className='schedule'>Schedule: {individual.schedule}</p>        {/*use props for chef schedule*/}
+                <h3>Schedule :</h3>
+                {schedule.map(days => { return (
+                <p className='schedule'>{days}</p>                    
+                )})}
             </div>
         )            
         } else {

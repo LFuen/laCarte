@@ -121,4 +121,8 @@ input[type="submit"]:active {
             transform:skew(8deg) rotate(3deg);
 }
 
-
+div.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

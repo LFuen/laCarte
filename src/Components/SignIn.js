@@ -25,4 +25,3 @@ class SignIn extends Component{
 
 export default SignIn
 
-// GET call to find user and allow entry

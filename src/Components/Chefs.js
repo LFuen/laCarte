@@ -10,10 +10,9 @@ class Chefs extends Component {
     render() {
         const {chefs} = this.context
         return (
-            <div>
+            <div className='chefPage'>
                 <h1>CHEFS</h1>
-                <div className='chefs'>
-                    <br/>
+                <div className='chefList'>
                     <section className='contain'>
                         <div className='chefImageContainer'>
                             <span title="La Carte">

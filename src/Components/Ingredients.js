@@ -17,32 +17,39 @@ class Ingredients extends Component{
         if(meals.length > 0){
             const ingID = this.props.match.params.id
             const ingr = meals.length ? meals.find(ing => ing.id === Number(ingID)) : ''
-            // GET INDIVIDUAL ITEMS FOR INGREDIENTS AND INDIVIDUAL CHEFS FOR RADIO BUTTONS
             
-            let i = ingr.ingredients.substring(1);
-            i = i.slice(0, -1);
-            let ingredients = i.split(',');
-            let chef = ingr.chef.split(',')
+            let listing = ingr.ingredients.substring(1)
+            listing = listing.slice(0, -1)
+            let ingredients = listing.split(',')
+            console.log(ingredients)
+            // ingredients = ingredients.replace(/[^a=zA-Z ]/g, "")
+
+            let chefList = ingr.chef.substring(1)
+            chefList = chefList.slice(0, -1)
+            let chefs = chefList.split(',')
 
             if (ingr) {
                 return (
-                <div>
-                    <div>
+                <div className='page'>
                     <h1>{ingr.meal_name}</h1>
-                    <h2>Ingredients:</h2>
-                        {ingredients.map(i => { return (
-                            <p>{i}</p>
-                        )})}
-                    <br/>
-                        <h2>Chefs</h2>             
-                    <div className='chefs'>
-                        <p>Choose a chef:</p>                
-                        <label>
-                            {chef.map(j => {return (
-                                <div><input type="radio" value={j} required/> <p>{j}</p></div>
+                    <div className='group'> 
+                        <div className='ingredients'>
+                            <h2>Ingredients:</h2>
+                            {ingredients.map(list => { return (
+                                <p className='listing'>{list}</p>
                             )})}
-                        </label> 
-                    </div>
+                        </div>                        
+                        <br/>
+                        <div className='chefs'>                        
+                            <h2>Chefs</h2>             
+                            <p className='listing'>Who would You like to prepare your meal?</p>                
+                            <label>
+                            {chefs.map(chef => {return (
+                                <div>
+                                    <input type="radio" value={chef} required/><p className='listing'>{chef}</p></div>
+                                )})}
+                            </label> 
+                        </div>                        
                     </div>
                     <a href={`/orders/${ingr.id}`}><button type="submit" className='shadow'>Order</button></a>
                 </div>)

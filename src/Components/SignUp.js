@@ -27,9 +27,12 @@ class SignUp extends Component {
                     </label>
 
                     </div>
+                    <div className='buttons'>
                     <a href='/MealPlan'><button className='shadow' name="back" value="cancel">Change</button></a>
                     <div className='spacing'/>
-                    <a href='/MealChoose'><button className='shadow' name="signup_submit" value="Sign me up">Sign Up</button></a>
+                    <a href='/MealChoose'><button className='shadow' name="signup_submit" value="Sign me up">Sign Up</button></a>                        
+                    </div>
+
                 </div>
             </div>
         )

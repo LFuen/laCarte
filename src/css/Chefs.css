@@ -1,9 +1,12 @@
+.chefPage {
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+
 .contain{
     display: flex;
     align-content: center;
-    width: 75%;
     justify-content: center;
-    margin-right: 80px;
 }
 
 .box {
@@ -16,7 +19,7 @@
     margin-top:50px;
 }
 
-.chefs{
+.chefList{
     font-size: 20px;
     font-family: 'Sacramento', cursive;
     font-family: 'Special Elite', cursive;

@@ -17,7 +17,6 @@ import Welcome from './Welcome'
 import ChefBio from './ChefBio'
 import LaCarteContext from '../context/LaCarteContext'
 import OrderHistory from './OrderHistory'
-import OrderEdit from './OrderEdit'
 
 
 
@@ -52,7 +51,6 @@ class Nav extends Component {
             <Route exact path='/meals/:id' component={Ingredients}/>
             <Route exact path='/OrderPlaced' component={OrderPlaced}/>
             <Route exact path='/orders/:id/:meal' component={OrderHistory}/>
-            {/* <Route exact path='/orders/:id' component={OrderEdit}/> */}
             <Route exact path='/SignIn' component={SignIn}/>
             </BrowserRouter>
         )
