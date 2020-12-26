@@ -17,7 +17,7 @@ class OrderForm extends Component{
 
         if(meals.length > 0){
             const idParam = this.props.match.params.id
-            const order = meals.find(meal => meal.id == idParam);
+            const order = meals.find(meal => meal.id === Number(idParam));
             console.log("HIT ORDER FORM");
             console.log(meals);
             console.log(idParam);

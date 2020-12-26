@@ -40,7 +40,3 @@ class About extends Component {
 
 export default About
 
-
-{/* <h1 className='aboutTitle'>LA CARTE</h1>
-<h3>The Healthy-Meal-Alternative App for the Busy Professional.</h3>
-<h5>(We didn't say workaholic, you did.)</h5> */}
