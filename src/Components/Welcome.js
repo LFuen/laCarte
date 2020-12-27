@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import '../css/Welcome.css'
-import {BroswerRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 

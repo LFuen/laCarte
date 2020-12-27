@@ -1,16 +1,72 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../context/LaCarteContext'
 import '../css/OrderForm.css'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import api from '../config'
+
 
 class OrderForm extends Component{
 
     static defaultProps = {
         match: {
             params: {}
-        }
+        },
+        onAddOrder: () => {}
     }
     static contextType = LaCarteContext
+
+    state = {
+        error: null,
+    }
+
+    handleSubmit = event => {
+        event.preventDefault()
+
+        const {houseadd, apartment, city, state, zip, tel, meal} = event.target
+        
+        const order = {
+            prim_add: houseadd.value,
+            sec_add: apartment.value,
+            city: city.value,
+            state: state.value,
+            zip: zip.value,
+            phone: tel.value,
+            meal: meal.value
+        }
+        this.setState({error: null})
+        fetch(`${api.API_ENDPOINT}/api/orders`, {
+            method: 'POST',
+            body: JSON.stringify(order),
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `Bearer ${api.API_KEY}`
+            }
+        })
+        .then(res => {
+            if(!res.ok) {
+                return res.json().then(error => {
+                    throw error
+                })
+            }
+            return res.json()
+        })
+        .then(data => {
+            houseadd.value = ''
+            apartment.value = ''
+            city.value = ''
+            state.value = ''
+            zip.value = ''
+            tel.value = ''
+            meal.value = ''
+            this.props.onAddOrder(data)
+        })
+        .catch(error => {
+            console.log(error)
+            this.setState({error})
+        })
+    }
+
+
 
     render(){
 
@@ -19,44 +75,44 @@ class OrderForm extends Component{
         if(meals.length > 0){
             const idParam = this.props.match.params.id
             const order = meals.find(meal => meal.id === Number(idParam));
-            console.log("HIT ORDER FORM");
-            console.log(meals);
-            console.log(idParam);
-            console.log(order);
-        return(
-            <div className="container">
-                <div className="title">
+            console.log('HIT ORDER FORM');
+
+            return(
+            <div className='container'>
+                <div className='title'>
                     <h2>Delivery Form</h2>
-                    <div className="d-flex">
-                    <form action="" method="" className='orderForm'>
+                    <div className='d-flex'>
+                    <form onSubmit={this.handleSubmit} method='' className='orderForm'>
                         <label>
                         <h3>{order.meal_name}</h3>
+                        <span>Meal</span>
+                        <input id='meal' type='text' name='meal' value={order.meal_name} required readOnly/>
                         <span>Street Address *</span><br/>
-                        <input type="text" name="houseadd" placeholder="House number and street name" required/>
+                        <input id='houseadd' type='text' name='houseadd' placeholder='House number and street name' required/>
                         </label>
                         <label>
                         <span>Address 2</span><br/>
-                        <input type="text" name="apartment" placeholder="Apartment, suite, unit etc. (optional)"/>
+                        <input id='apartment' type='text' name='apartment' placeholder='Apartment, suite, unit etc. (optional)'/>
                         </label>
                         <label>
                         <span>City *</span><br/>
-                        <input type="text" name="city" placeholder='City'/> 
+                        <input id='city' type='text' name='city' placeholder='City'/> 
                         </label>
                         <label>
                         <span>State / County *</span><br/>
-                        <input type="text" name="state" placeholder='State'/> 
+                        <input id='state' type='text' name='state' placeholder='State'/> 
                         </label>
                         <label>
                         <span>Postcode / ZIP *</span><br/>
-                        <input type="text" name="zip" placeholder='Zip Code'/> 
+                        <input id='zip' type='text' name='zip' placeholder='Zip Code'/> 
                         </label>
                         <label>
                         <span>Phone *</span><br/>
-                        <input type="tel" name="tel" placeholder='(000) 000-000'/> 
+                        <input id='tel' type='tel' name='tel' placeholder='(000) 000-000'/> 
                         </label>
-                        <Link to='/MealChoose'><button type="button" className='shadow'>Change Meal
+                        <Link to='/MealChoose'><button type='button' className='shadow'>Change Meal
                         </button></Link>
-                        <Link to='/OrderPlaced'><button type="button" className='shadow'>Place Order</button></Link>
+                        <Link to='/OrderPlaced'><button type='submit' className='shadow'>Place Order</button></Link>
                     </form>
                 </div>
                 </div>

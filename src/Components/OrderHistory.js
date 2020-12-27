@@ -3,7 +3,7 @@ import '../css/OrderHistory.css'
 import api from '../config'
 import LaCarteContext from '../context/LaCarteContext'
 import PropTypes from 'prop-types'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 class OrderHistory extends Component{
@@ -63,6 +63,26 @@ class OrderHistory extends Component{
         })
     }
 
+    // clickEdit() {
+    //     e.preventDefault()
+
+    //     const orderID = this.context.id
+
+    //     fetch(`${api.API_ENDPOINT}/api/orders/${orderID}`, {
+    //         method: 'PATCH',
+    //         headers: {'content-type': 'application/json'},
+    //         body: JSON.stringify({
+    //             "prim_add": PropTypes.string.isRequired,
+    //             "sec_add": PropTypes.string,            
+    //             "city": PropTypes.string.isRequired,
+    //             "state": PropTypes.string.isRequired,
+    //             "zip": PropTypes.number.isRequired,
+    //             "phone": PropTypes.number.isRequired,
+    //             "meal": PropTypes.string.isRequired
+    //         })
+    //     })
+    // }
+
     render() {
 
         const {orders} = this.context
@@ -76,7 +96,7 @@ class OrderHistory extends Component{
                 <h4>{order.meal}</h4>
                 <p className='order'>Address: {order.prim_add}</p>
                 <p className='order'>Phone: {order.phone}</p>
-                <Link to={`/orders/${order.id}`}><button type='button' className='shadow'>Edit</button></Link>
+                <Link to={`/orders/${order.id}`}><button type='button' className='shadow' onClick={this.clickEdit}>Edit</button></Link>
                 <Link to={`/OrderDeleted`}><button type='button' className='shadow' onClick={this.clickDelete}>Delete</button></Link>
                 </div>
                 )})}            
