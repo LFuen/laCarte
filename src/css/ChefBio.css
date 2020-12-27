@@ -24,7 +24,7 @@ h1{
 .bio{
     margin: 15px;
     font-size: 20px;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px rgb(88, 88, 88);
 }
 
 .foodSched {
@@ -59,6 +59,6 @@ Link {
 p {
     font-size: 20px;
     padding-left: 0;
-    color: whitesmoke !important;
-    text-shadow: 2px 2px black;
+    color: whitesmoke;
+    text-shadow: 2px 2px rgb(155, 155, 155);
 }

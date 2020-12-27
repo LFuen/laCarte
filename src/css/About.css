@@ -84,4 +84,7 @@ p.available {
     margin-top: 20px;
     font-weight: bold;
 }
- 
+
+p.about {
+    color:black !important;
+}
