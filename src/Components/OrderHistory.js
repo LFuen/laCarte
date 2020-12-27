@@ -2,19 +2,44 @@ import React, {Component} from 'react'
 import '../css/OrderHistory.css'
 import api from '../config'
 import LaCarteContext from '../context/LaCarteContext'
+import PropTypes from 'prop-types'
 
 
 class OrderHistory extends Component{
+    constructor(props) {
+        super(props);
+            
+        this.state = { 
+            editing: false 
+        }
+        
+    }
+
     static defaultProps = {
         onDeleteOrder: () => {}
     }
+
+    static propTypes = {
+        onClick: PropTypes.func,
+        order: PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            prim_add: PropTypes.string.isRequired,
+            sec_add: PropTypes.string,            
+            city: PropTypes.string.isRequired,
+            state: PropTypes.string.isRequired,
+            zip: PropTypes.number.isRequired,
+            phone: PropTypes.number.isRequired,
+            meal: PropTypes.string.isRequired
+        })
+    }
+
 
     static contextType = LaCarteContext
 
     clickDelete = e => {
         e.preventDefault()
         
-        const orderID = this.props.id
+        const orderID = this.context.id
 
         fetch(`${api.API_ENDPOINT}/api/orders/${orderID}`, {
             method: 'DELETE',

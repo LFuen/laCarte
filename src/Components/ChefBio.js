@@ -33,21 +33,25 @@ class ChefBio extends Component {
             <div className='wholeBio'>
                 <h1>Chef {individual.chef_name}</h1>
                 <div className='chefBio'>
-                <img src='' alt=''/>       
-                <br/>
-                <p className='bio'>{individual.bio}</p>
-                <br/>
-                <h3>Cuisines</h3>
-                {cuisine.map(origin => { return (
-                <p className='cuisine'>{origin}</p>                    
-                )})}
+                    <p className='bio'>{individual.bio}</p>
+                </div>                
+                
+                <div className='foodSched'>
+                    <div className='cuisine'>
+                        <h3>Cuisines</h3>
+                        {cuisine.map(origin => { return (
+                        <p>{origin}</p>                    
+                        )})}                    
+                    </div>
 
-                <br/>
-                <h3>Schedule</h3>
-                {schedule.map(days => { return (
-                <p className='schedule'>{days}</p>                    
-                )})}
+                    <div className='schedule' >
+                        <h3>Schedule</h3>
+                        {schedule.map(days => { return (
+                        <p>{days}</p>                    
+                        )})}                    
+                    </div>                    
                 </div>
+
             </div>
         )            
         } else {

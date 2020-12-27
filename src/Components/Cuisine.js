@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../context/LaCarteContext'
 import '../css/Cuisine.css'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 class Cuisine extends Component{
@@ -22,15 +23,19 @@ class Cuisine extends Component{
 
         if(cuisineOrg && cuisineMeals.length > 0){
         return(
-            <div>
-                <br/>
+            <div className='dishes'>
+
                 <h1>{cuisineOrg.origin} Dishes</h1>
-                <br/>
+
                 {cuisineMeals.map(meal => {
-                    return (<a href={`/meals/${meal.id}`} key={meal.id}>{meal.meal_name}</a>)
-                })}
+                    return (
+                    <div>
+                        <Link to={`/meals/${meal.id}`} key={meal.id}>
+                            <h4>{meal.meal_name}</h4>
+                        </Link>
+                    </div>
+                )})}
                 
-                <br/>
             </div>
         )
         } else {

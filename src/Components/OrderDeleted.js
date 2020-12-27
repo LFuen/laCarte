@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import '../css/OrderDeleted.css'
 
 
 class OrderDeleted extends Component{

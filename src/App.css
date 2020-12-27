@@ -53,7 +53,7 @@ a:focus {
 */
 
 :root {
-  --shadow: #960303;
+  --shadow: rgb(233, 111, 111);
   --scrollbarBG: rgb(0, 0, 0);
   --thumbBG: #dddddd;
   border-radius: 10px;

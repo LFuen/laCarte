@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import '../css/Welcome.css'
+import {BroswerRouter, Link} from 'react-router-dom'
 
 
 
@@ -11,9 +12,9 @@ class Welcome extends Component {
                 <h3 className='worked'>The Healthy-Meal-Alternative App for the Busy Professional.</h3>
                 <h5>(We didn't say workaholic, you did.)</h5>
                 <div className='flexed'>
-                    <a href='/MealPlan'><button className='shadow' id="newuser">Sign Me Up</button></a>
+                    <Link to='/MealPlan'><button className='shadow' id="newuser">Sign Me Up</button></Link>
                     <span title="Bon Apetit!"><img className="mainImage" alt="laCarte" src="https://lfuen.github.io/laCarte/images/laCarte.png"/></span> 
-                    <a href='/SignIn'><button className='shadow' id="returning">Returning User</button></a>
+                    <Link to='/SignIn'><button className='shadow' id="returning">Returning User</button></Link>
                 </div>
             </div>
         )

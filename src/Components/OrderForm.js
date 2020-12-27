@@ -53,7 +53,8 @@ class OrderForm extends Component{
                         <span>Phone *</span><br/>
                         <input type="tel" name="tel" placeholder='(000) 000-000'/> 
                         </label>
-                        <a href='/MealChoose'><button type="button" className='shadow'>Change Meal</button></a>
+                        <a href='/MealChoose'><button type="button" className='shadow'>Change Meal
+                        </button></a>
                         <a href='/OrderPlaced'><button type="button" className='shadow'>Place Order</button></a>
                     </form>
                 </div>
