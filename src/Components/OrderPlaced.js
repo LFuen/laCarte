@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import '../css/OrderPlaced.css'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 class OrderPlaced extends Component{
     render(){
         return(

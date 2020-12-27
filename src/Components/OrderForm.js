@@ -80,7 +80,7 @@ class OrderForm extends Component{
             return(
             <div className='container'>
                 <div className='title'>
-                    <h2>Delivery Form</h2>
+                    <h2>Order Form</h2>
                     <div className='d-flex'>
                     <form onSubmit={this.handleSubmit} method='' className='orderForm'>
                         <label>
@@ -112,7 +112,9 @@ class OrderForm extends Component{
                         </label>
                         <Link to='/MealChoose'><button type='button' className='shadow'>Change Meal
                         </button></Link>
-                        <Link to='/OrderPlaced'><button type='submit' className='shadow'>Place Order</button></Link>
+                        <button type='submit' className='shadow'>
+                            <Link to='/OrderPlaced'>Place Order</Link>
+                        </button>
                     </form>
                 </div>
                 </div>

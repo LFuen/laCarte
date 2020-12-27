@@ -7,16 +7,11 @@ import {Link} from 'react-router-dom'
 
 
 class OrderHistory extends Component{
-    constructor(props) {
-        super(props);
-            
-        this.state = { 
-            editing: false 
-        }
-        
-    }
 
     static defaultProps = {
+        match: {
+            params: {}
+        },
         onDeleteOrder: () => {}
     }
 
@@ -34,13 +29,17 @@ class OrderHistory extends Component{
         })
     }
 
-
     static contextType = LaCarteContext
+
+    state = {
+        error: null
+    }
 
     clickDelete = e => {
         e.preventDefault()
         
-        const orderID = this.context.id
+        const orderID = this.context.orders.id
+        console.log('context is', this.context.orders[0].id)
 
         fetch(`${api.API_ENDPOINT}/api/orders/${orderID}`, {
             method: 'DELETE',
@@ -55,11 +54,11 @@ class OrderHistory extends Component{
             return res.json()
         })
         .then(() => {
-            this.context.deleteOrder(orderID)
             this.props.onDeleteOrder(orderID)
         })
         .catch(error => {
             console.error({error})
+            this.setState({error})
         })
     }
 
@@ -93,11 +92,11 @@ class OrderHistory extends Component{
             <div className='allOrders'>
                 {orders.map(order => { return (
                 <div>
-                <h4>{order.meal}</h4>
+                <h4 key={order.id}>{order.meal}</h4>
                 <p className='order'>Address: {order.prim_add}</p>
                 <p className='order'>Phone: {order.phone}</p>
                 <Link to={`/orders/${order.id}`}><button type='button' className='shadow' onClick={this.clickEdit}>Edit</button></Link>
-                <Link to={`/OrderDeleted`}><button type='button' className='shadow' onClick={this.clickDelete}>Delete</button></Link>
+                <button type='button' className='shadow' onClick={this.clickDelete}>Delete</button>
                 </div>
                 )})}            
             </div>
