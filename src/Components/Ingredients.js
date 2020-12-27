@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import '../css/Ingredients.css'
-import LaCarteContext from '../context/LaCarteContext';
+import LaCarteContext from '../context/LaCarteContext'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 class Ingredients extends Component{
     
@@ -22,7 +23,6 @@ class Ingredients extends Component{
             listing = listing.slice(0, -1)
             let ingredients = listing.split(',')
             console.log(ingredients)
-            // ingredients = ingredients.replace(/[^a=zA-Z ]/g, "")
 
             let chefList = ingr.chef.substring(1)
             chefList = chefList.slice(0, -1)
@@ -43,15 +43,15 @@ class Ingredients extends Component{
                         <div className='chefs'>                        
                             <h2>Chefs</h2>             
                             <p className='listing'>Who would You like to prepare your meal?</p>                
-                            <label>
+
                             {chefs.map(chef => {return (
-                                <div>
-                                    <input type="radio" value={chef} required/><p className='listing'>{chef}</p></div>
-                                )})}
-                            </label> 
+                            <label>
+                                <input type="radio" value={chef} required/><p className='listing'>{chef}</p>
+                            </label>
+                            )})}
                         </div>                        
                     </div>
-                    <a href={`/orders/${ingr.id}`}><button type="submit" className='shadow'>Order</button></a>
+                    <Link to={`/orders/${ingr.id}`}><button type="submit" className='shadow'>Order</button></Link>
                 </div>)
             } else {
                 return (<h3>Sorry, we don't cook that yet!</h3>)

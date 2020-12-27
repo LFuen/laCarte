@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import '../css/MealPlan.css'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 class MealPlan extends Component {
@@ -44,8 +45,8 @@ class MealPlan extends Component {
                 </div>
                 </div>
 
-                <a href='/Welcome'><button className='shadow' name="cancel" value="Cancel">Cancel</button></a>
-                <a href='/SignUp'><button className='shadow' name="signUp" value="SignUp">Sign Up</button></a>                     
+                <Link to='/Welcome'><button className='shadow' name="cancel" value="Cancel">Cancel</button></Link>
+                <Link to='/SignUp'><button className='shadow' name="signUp" value="SignUp">Sign Up</button></Link>                     
 
             </div>
         )
@@ -67,6 +68,6 @@ export default MealPlan
             //             <li>10 Meals</li>
             //             <li>`Same-Day Scheduling (Up to 2 hours before)`</li>
             //             <li>`Free Delivery (Driver Tip Not Included)`</li>
-            //             <li className='grey'><a href='/SignUp' className='button'>Sign Up</a></li>
+            //             <li className='grey'><Link to='/SignUp' className='button'>Sign Up</Link></li>
             //         </ul>
             //     </div>

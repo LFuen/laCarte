@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import '../css/MealList.css'
-import LaCarteContext from '../context/LaCarteContext';
+import LaCarteContext from '../context/LaCarteContext'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 class MealList extends Component {
@@ -12,12 +13,16 @@ class MealList extends Component {
         return (
             <div className='mealList'>
                 {meals.map(meal => { return (
-                <a href={`/meals/${meal.id}`} key={meal.id}>
+                <Link to={`/meals/${meal.id}`} key={meal.id}>
                     <div className='polaroid'>
-                            <span title="La Carte"><img className="chefMoji" alt={meal.meal_name} src={meal.img_url} /></span>
-                            <div className='container'>{<p>{meal.meal_name}</p>}</div>
+                        <span title="La Carte">
+                            <img className="chefMoji" alt={meal.meal_name} src={meal.img_url} />
+                        </span>
+                        <div className='container'>
+                            {<p>{meal.meal_name}</p>}
+                        </div>
                     </div>
-                </a>
+                </Link>
                 )})}
             </div>
         )

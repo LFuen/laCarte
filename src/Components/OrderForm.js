@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../context/LaCarteContext'
 import '../css/OrderForm.css'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 class OrderForm extends Component{
 
@@ -53,9 +54,9 @@ class OrderForm extends Component{
                         <span>Phone *</span><br/>
                         <input type="tel" name="tel" placeholder='(000) 000-000'/> 
                         </label>
-                        <a href='/MealChoose'><button type="button" className='shadow'>Change Meal
-                        </button></a>
-                        <a href='/OrderPlaced'><button type="button" className='shadow'>Place Order</button></a>
+                        <Link to='/MealChoose'><button type="button" className='shadow'>Change Meal
+                        </button></Link>
+                        <Link to='/OrderPlaced'><button type="button" className='shadow'>Place Order</button></Link>
                     </form>
                 </div>
                 </div>

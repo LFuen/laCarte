@@ -1,15 +1,16 @@
 import React, {Component} from 'react'
 import '../css/OrderPlaced.css'
+import {BrowserRouter, Link} from 'react-router-dom'
 class OrderPlaced extends Component{
     render(){
         return(
             <div className='flexed'>
-                <a href='/MealChoose'><button type="button" className='shadow'>Schedule Next Meal</button></a>
+                <Link to='/MealChoose'><button type="button" className='shadow'>Schedule Next Meal</button></Link>
                     <span title="Received" className='flexedMid'>
                         <img className="order" alt="orderReceived" src="https://lfuen.github.io/laCarte/images/Order.png"/>
-                        <a href='/OrderHistory'><button type="button" className='shadow'>View/Edit Order</button></a>
+                        <Link to='/OrderHistory'><button type="button" className='shadow'>View/Edit Order</button></Link>
                     </span>    
-                <a href='/Welcome'><button type="button" className='shadow'>Sign Out</button></a>
+                <Link to='/Welcome'><button type="button" className='shadow'>Sign Out</button></Link>
             </div>
         )
     }

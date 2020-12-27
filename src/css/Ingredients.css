@@ -30,9 +30,11 @@ p.listing {
     font-size: 15px;
     font-weight: bold;
     padding: 5px;
+    color: black;
 }
 
 div.page {
+    margin-top: 25px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;

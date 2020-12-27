@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import '../css/Chefs.css'
-import LaCarteContext from '../context/LaCarteContext';
+import LaCarteContext from '../context/LaCarteContext'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 class Chefs extends Component {
@@ -21,12 +22,12 @@ class Chefs extends Component {
                         </div>
                         <div className='box'>  
                         {chefs.map(chef => { return (
-                        <a href={`/chefs/${chef.chef_name}`} key={chef.id}><h4>{chef.chef_name}</h4></a>
+                        <Link to={`/chefs/${chef.chef_name}`} key={chef.id}><h4>{chef.chef_name}</h4></Link>
                         )})}
                         </div>
                     </section>
                 </div>
-            </div>
+            </div> 
         )
     }
 }

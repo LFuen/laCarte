@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import '../css/SignUp.css'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 class SignUp extends Component {
@@ -28,9 +29,9 @@ class SignUp extends Component {
 
                     </div>
                     <div className='buttons'>
-                    <a href='/MealPlan'><button className='shadow' name="back" value="cancel">Change</button></a>
+                    <Link to='/MealPlan'><button className='shadow' name="back" value="cancel">Change</button></Link>
                     <div className='spacing'/>
-                    <a href='/MealChoose'><button className='shadow' name="signup_submit" value="Sign me up">Sign Up</button></a>                        
+                    <Link to='/MealChoose'><button className='shadow' name="signup_submit" value="Sign me up">Sign Up</button></Link>                        
                     </div>
 
                 </div>

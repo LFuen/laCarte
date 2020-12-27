@@ -3,6 +3,7 @@ import '../css/OrderHistory.css'
 import api from '../config'
 import LaCarteContext from '../context/LaCarteContext'
 import PropTypes from 'prop-types'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 class OrderHistory extends Component{
@@ -75,8 +76,8 @@ class OrderHistory extends Component{
                 <h4>{order.meal}</h4>
                 <p className='order'>Address: {order.prim_add}</p>
                 <p className='order'>Phone: {order.phone}</p>
-                <a href={`/orders/${order.id}`}><button type='button' className='shadow'>Edit</button></a>
-                <a href={`/OrderDeleted`}><button type='button' className='shadow' onClick={this.clickDelete}>Delete</button></a>
+                <Link to={`/orders/${order.id}`}><button type='button' className='shadow'>Edit</button></Link>
+                <Link to={`/OrderDeleted`}><button type='button' className='shadow' onClick={this.clickDelete}>Delete</button></Link>
                 </div>
                 )})}            
             </div>
