@@ -6,7 +6,7 @@ class SignIn extends Component{
     render(){
         return(
             <div className="main">
-                <p className="sign" align="center">Sign in</p>
+                <p className="sign" align="center">Sign In</p>
                 <form className="form1">
                     <label><p>Username</p>
                         <input className="un" type="text" required/>

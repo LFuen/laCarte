@@ -32,6 +32,7 @@ class Ingredients extends Component{
                 return (
                 <div className='page'>
                     <h1>{ingr.meal_name}</h1>
+                    <img src={ingr.img_url} className='mealIng' alt={ingr.meal_name}/>
                     <div className='group'> 
                         <div className='ingredients'>
                             <h2>Ingredients:</h2>

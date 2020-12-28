@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../context/LaCarteContext'
 import '../css/MealChoose.css'
-import {Link} from 'react-router-dom'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 class cuisineChoose extends Component{

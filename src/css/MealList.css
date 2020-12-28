@@ -49,6 +49,7 @@ img.chefMoji {
   width: 75%;
   height: auto;
   border-radius: 25px;
+  box-shadow: 0 4px 8px 0 whitesmoke;
 }
 
 div.container {

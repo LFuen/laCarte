@@ -16,7 +16,7 @@ class MealList extends Component {
                 <Link to={`/meals/${meal.id}`} key={meal.id}>
                     <div className='polaroid'>
                         <span title="La Carte">
-                            <img className="chefMoji" alt={meal.meal_name} src={meal.img_url} />
+                            <img className="chefMoji" alt={meal.meal_name} src={meal.img_url}/>
                         </span>
                         <div className='container'>
                             {<p>{meal.meal_name}</p>}

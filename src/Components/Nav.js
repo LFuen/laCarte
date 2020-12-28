@@ -48,7 +48,7 @@ class Nav extends Component {
             <Route exact path='/SignUp' component={SignUp}/>
             <Route exact path='/MealChoose' component={MealChoose}/>
             <Route exact path='/orders/:id' component={OrderForm}/>
-            <Route exact path='/cuisines/:origin' component={Cuisine}/>
+            <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>
             <Route exact path='/meals/:id' component={Ingredients}/>
             <Route exact path='/OrderPlaced' component={OrderPlaced}/>
             <Route exact path='/OrderHistory' component={OrderHistory}/>

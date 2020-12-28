@@ -9,7 +9,7 @@ div.ingredients {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    background-color:rgb(82, 114, 114);
+    background-color:rgb(110, 122, 122);
     border: 5px solid aliceblue;
     border-radius: 50px;
 }
@@ -18,7 +18,7 @@ div.ingredients {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 5px solid rgb(82, 114, 114);
+    border: 5px solid rgb(110, 122, 122);
     margin-top: 25px;
     background-color: aliceblue;
     border-radius: 35px;
@@ -41,4 +41,10 @@ div.page {
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+
+img.mealIng {
+    border-radius: 40px;
+    box-shadow: 0 4px 8px black;
+    margin-bottom: 10px;
 }

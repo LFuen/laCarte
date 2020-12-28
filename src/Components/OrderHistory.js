@@ -92,11 +92,13 @@ class OrderHistory extends Component{
             <div className='allOrders'>
                 {orders.map(order => { return (
                 <div>
-                <h4 key={order.id}>{order.meal}</h4>
+                <h4>{order.meal}</h4>
                 <p className='order'>Address: {order.prim_add}</p>
                 <p className='order'>Phone: {order.phone}</p>
                 <Link to={`/orders/${order.id}`}><button type='button' className='shadow' onClick={this.clickEdit}>Edit</button></Link>
-                <button type='button' className='shadow' onClick={this.clickDelete}>Delete</button>
+                <button type='button' className='shadow' onClick={this.clickDelete}>
+                        Delete
+                </button>
                 </div>
                 )})}            
             </div>

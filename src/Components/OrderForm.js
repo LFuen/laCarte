@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../context/LaCarteContext'
 import '../css/OrderForm.css'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import api from '../config'
+
 
 
 class OrderForm extends Component{
@@ -68,6 +69,7 @@ class OrderForm extends Component{
 
 
 
+
     render(){
 
         const {meals} = this.context
@@ -84,7 +86,7 @@ class OrderForm extends Component{
                     <div className='d-flex'>
                     <form onSubmit={this.handleSubmit} method='' className='orderForm'>
                         <label>
-                        <h3>{order.meal_name}</h3>
+
                         <span>Meal</span>
                         <input id='meal' type='text' name='meal' value={order.meal_name} required readOnly/>
                         <span>Street Address *</span><br/>
@@ -112,8 +114,8 @@ class OrderForm extends Component{
                         </label>
                         <Link to='/MealChoose'><button type='button' className='shadow'>Change Meal
                         </button></Link>
-                        <button type='submit' className='shadow'>
-                            <Link to='/OrderPlaced'>Place Order</Link>
+                        <button type='button' className='shadow'>
+                            Place Order
                         </button>
                     </form>
                 </div>
