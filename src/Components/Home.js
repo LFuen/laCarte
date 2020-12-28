@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import '../css/Home.css'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 
@@ -24,5 +24,3 @@ class Home extends Component {
 
 
 export default Home
-
-// NEED TO ADD METHOD FOR onClick to route to Sign In or Sign Up

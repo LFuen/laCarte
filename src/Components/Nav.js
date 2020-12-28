@@ -17,7 +17,9 @@ import Welcome from './Welcome'
 import ChefBio from './ChefBio'
 import LaCarteContext from '../context/LaCarteContext'
 import OrderHistory from './OrderHistory'
-import OrderDeleted from './OrderDeleted'
+import OrderDeleted from './OrderUpdated'
+import OrderEdit from './OrderEdit'
+import OrderUpdated from './OrderUpdated'
 
 
 
@@ -32,9 +34,11 @@ class Nav extends Component {
             <nav className='navigation' id="navbar">
                 <NavLink to='/Welcome'>Home</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
-                <NavLink to='/MealList'>Meals</NavLink>
+                <NavLink to='/MealChoose'>Selection</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
                 <NavLink to='/Chefs'>Chefs</NavLink>
+                <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
+                <NavLink to='/OrderHistory'>Orders</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
                 <NavLink to='/About'>About</NavLink>
             </nav>
@@ -52,7 +56,8 @@ class Nav extends Component {
             <Route exact path='/meals/:id' component={Ingredients}/>
             <Route exact path='/OrderPlaced' component={OrderPlaced}/>
             <Route exact path='/OrderHistory' component={OrderHistory}/>
-            <Route exact path='/OrderDeleted' component={OrderDeleted}/>
+            <Route exact path='/orders/:id/:meal' component={OrderEdit}/>
+            <Route exact path='/OrderUpdated' component={OrderUpdated}/>
             <Route exact path='/SignIn' component={SignIn}/>
             </BrowserRouter>
         )
