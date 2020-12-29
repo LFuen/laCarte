@@ -1,0 +1,88 @@
+.aboutTitle{
+    margin: 0 0 0 0;
+    font-size: 40px;
+}
+
+.aboutPara {
+    font-size: 20px;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Special Elite', cursive;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.quote {
+    position: relative;
+    letter-spacing: .03em;
+    margin-bottom: .5rem;    
+    line-height: 1.4em;
+    font-size: 40px;
+    color: black;
+}
+
+.quote:before {
+        content: "“";
+        position: absolute;
+        left: -.7em;
+}
+    
+.quote:after {
+        content: "”";
+        margin-right: -1rem;
+}
+
+.quote--container {
+    margin: 4.5rem auto 0;
+    width: 30em;
+    padding-bottom: .5rem;
+}
+
+.quote--highlight {
+    color: #D24335;
+}
+
+.quote--author {
+    font-family: 'Open Sans Condensed';
+    font-size: .8rem;
+    text-align: right;
+    font-weight: 300;
+}
+
+.about{
+    width: 100%;
+    margin: 1.5rem auto 100px;
+}
+
+.paragraph{
+    background-color:rgb(233, 111, 111);
+    border: 3px solid aliceblue;
+    border-radius: 50px;
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.available {
+    font-size: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.about {
+    color:black !important;
+}
+
