@@ -36,8 +36,8 @@ class Ingredients extends Component{
                     <div className='group'> 
                         <div className='ingredients'>
                             <h2>Ingredients:</h2>
-                            {ingredients.map(list => { return (
-                                <p className='listing'>{list}</p>
+                            {ingredients.map((list, idx) => { return (
+                                <p key={idx} className='listing'>{list}</p>
                             )})}
                         </div>                        
                         <br/>
@@ -45,8 +45,8 @@ class Ingredients extends Component{
                             <h2>Chefs</h2>             
                             <p className='listing'>Who would You like to prepare your meal?</p>                
 
-                            {chefs.map(chef => {return (
-                            <label>
+                            {chefs.map((chef, idx) => {return (
+                            <label key={idx}>
                                 <input type='radio' value={chef} required/><br/><p className='listing'>{chef}</p>
                             </label>
                             )})}

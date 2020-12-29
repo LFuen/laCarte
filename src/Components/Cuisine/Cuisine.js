@@ -29,8 +29,8 @@ class Cuisine extends Component{
 
                 {cuisineMeals.map(meal => {
                     return (
-                    <div>
-                        <Link to={`/meals/${meal.id}`} key={meal.id}>
+                    <div key={meal.id}>
+                        <Link to={`/meals/${meal.id}`}>
                             <h4>{meal.meal_name}</h4>
                         </Link>
                     </div>
