@@ -32,16 +32,16 @@ test('Should call onSubmit prop for valid form submission', () => {
     }]
 
 
-  
+
     Enzyme.configure({ adapter: new Adapter() })
     const onSubmitSpy = jest.fn();
-  
+
     const wrapper = shallow(
-      <OrderForm order={order} meals={meals} onSubmit={onSubmitSpy} />
+        <OrderForm order={order} meals={meals} onSubmit={onSubmitSpy} />
     );
-  
+
     wrapper.find('form').simulate('submit', { preventDefault: () => {} });
-  
+
     expect(wrapper.state('error')).toBe('');
     expect(onSubmitSpy).toHaveBeenLastCalledWith({
         prim_add: order.houseadd,
@@ -52,4 +52,4 @@ test('Should call onSubmit prop for valid form submission', () => {
         phone: order.tel,
         meal: order.meal
     });
-  });
+});

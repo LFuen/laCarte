@@ -67,6 +67,3 @@ class ChefBio extends Component {
 
 
 export default ChefBio
-
-
-// FIGURE OUT HOW TO PUT EACH CHEF IN THEIR OWN BIO PAGE

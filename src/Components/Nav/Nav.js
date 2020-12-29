@@ -2,9 +2,7 @@ import React, {Component} from 'react'
 import {BrowserRouter, Route, NavLink} from 'react-router-dom'
 import './Nav.css'
 import Chefs from '../Chefs/Chefs'
-import Home from '../Home/Home'
 import About from '../About/About'
-import MealPlan from '../MealPlan/MealPlan'
 import MealList from '../MealList/MealList'
 import MealChoose from '../MealChoose/MealChoose'
 import OrderForm from '../OrderForm/OrderForm'
@@ -29,23 +27,21 @@ class Nav extends Component {
         return(
             <BrowserRouter>
             <nav className='navigation' id="navbar">
-                <NavLink to='/Welcome'>Home</NavLink>
+                <NavLink to='/Welcome' className='navLink'>Home</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
-                <NavLink to='/MealChoose'>Selection</NavLink>
+                <NavLink to='/MealChoose' className='navLink'>Selection</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
-                <NavLink to='/Chefs'>Chefs</NavLink>
+                <NavLink to='/Chefs' className='navLink'>Chefs</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
-                <NavLink to='/OrderHistory'>Orders</NavLink>
+                <NavLink to='/OrderHistory' className='navLink'>Orders</NavLink>
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
-                <NavLink to='/About'>About</NavLink>
+                <NavLink to='/About' className='navLink'>About</NavLink>
             </nav>
-            <Route exact path='/' component={Home}/>
             <Route exact path='/Welcome' component={Welcome}/>
             <Route exact path='/MealList' component={MealList}/>
             <Route exact path='/Chefs' component={Chefs}/>
             <Route exact path='/chefs/:chef' component={ChefBio}/>
             <Route exact path='/About' component={About}/>
-            <Route exact path='/MealPlan' component={MealPlan}/>
             <Route exact path='/MealChoose' component={MealChoose}/>
             <Route exact path='/orders/:id' component={OrderForm}/>
             <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>

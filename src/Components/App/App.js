@@ -57,7 +57,7 @@ class App extends Component {
       fetch(`${api.API_ENDPOINT}/api/meals`, {
         method: 'GET',
         headers: {
-          Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
+          Authorization: `Bearer ${api.API_KEY}`
         }
       })
     ])
@@ -76,7 +76,7 @@ class App extends Component {
       fetch(`${api.API_ENDPOINT}/api/chefs`, {
         method: 'GET',
         headers: {
-          Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
+          Authorization: `Bearer ${api.API_KEY}`
         }
       })
     ])
@@ -93,7 +93,7 @@ class App extends Component {
       fetch(`${api.API_ENDPOINT}/api/cuisines`, {
         method: 'GET',
         headers: {
-          Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
+          Authorization: `Bearer ${api.API_KEY}`
         }
       })
     ])
@@ -110,7 +110,7 @@ class App extends Component {
       fetch(`${api.API_ENDPOINT}/api/orders`, {
         method: 'GET',
         headers: {
-          Authorization: 'Bearer c3f5a85c-2f9d-11eb-adc1-0242ac120002'
+          Authorization: `Bearer ${api.API_KEY}`
         }
       })
     ])
@@ -144,7 +144,6 @@ class App extends Component {
       updateOrder: this.updateOrder,
       deleteOrder: this.deleteOrder,
     };
-    console.log(value)
     
     
     return (

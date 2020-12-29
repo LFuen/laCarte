@@ -45,7 +45,4 @@ class Cuisine extends Component{
 }
 
 
-
-
-
 export default Cuisine
