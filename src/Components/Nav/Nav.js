@@ -37,7 +37,7 @@ class Nav extends Component {
                 <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
                 <NavLink to='/About' className='navLink'>About</NavLink>
             </nav>
-            <Route exact path='/Welcome' component={Welcome}/>
+            <Route exact path='/' component={Welcome}/>
             <Route exact path='/MealList' component={MealList}/>
             <Route exact path='/Chefs' component={Chefs}/>
             <Route exact path='/chefs/:chef' component={ChefBio}/>
