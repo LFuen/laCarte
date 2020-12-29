@@ -26,15 +26,15 @@ class Nav extends Component {
 
         return(
             <BrowserRouter>
-            <nav className='navigation' id="navbar">
-                <NavLink to='/Welcome' className='navLink'>Home</NavLink>
-                <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
+            <nav className='navigation' id='navbar'>
+                <NavLink to='/' className='navLink'>Home</NavLink>
+                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
                 <NavLink to='/MealChoose' className='navLink'>Selection</NavLink>
-                <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
+                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
                 <NavLink to='/Chefs' className='navLink'>Chefs</NavLink>
-                <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
+                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
                 <NavLink to='/OrderHistory' className='navLink'>Orders</NavLink>
-                <span title="La Carte"><img className="chefHat" alt="chef" src="https://lfuen.github.io/laCarte/images/chef.png"/></span>
+                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
                 <NavLink to='/About' className='navLink'>About</NavLink>
             </nav>
             <Route exact path='/' component={Welcome}/>

@@ -26,7 +26,7 @@ class cuisineChoose extends Component{
                 </div>
 
                 <div className='option'>
-                    <span title="Dinner is Served!"><img className="mainImage" alt="served" src="https://lfuen.github.io/laCarte/images/served.png"/></span> 
+                    <span title='Dinner is Served!'><img className='mainImage' alt='served' src='https://lfuen.github.io/laCarte/images/served.png'/></span> 
                     <Link to='/MealList'><h3>All Meals</h3></Link>
                 </div>
 

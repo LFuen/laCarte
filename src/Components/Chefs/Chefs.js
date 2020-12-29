@@ -16,8 +16,8 @@ class Chefs extends Component {
                 <div className='chefList'>
                     <section className='contain'>
                         <div className='chefImageContainer'>
-                            <span title="Chef!">
-                            <img alt="chefMoji" src="https://lfuen.github.io/laCarte/images/chefmoji.png"/>
+                            <span title='Chef!'>
+                            <img alt='chefMoji' src='https://lfuen.github.io/laCarte/images/chefmoji.png'/>
                             </span>
                         </div>
                         <div className='box'>  

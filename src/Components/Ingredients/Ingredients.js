@@ -47,12 +47,12 @@ class Ingredients extends Component{
 
                             {chefs.map(chef => {return (
                             <label>
-                                <input type="radio" value={chef} required/><br/><p className='listing'>{chef}</p>
+                                <input type='radio' value={chef} required/><br/><p className='listing'>{chef}</p>
                             </label>
                             )})}
                         </div>                        
                     </div>
-                    <Link to={`/orders/${ingr.id}`}><button type="submit" className='shadow'>Order</button></Link>
+                    <Link to={`/orders/${ingr.id}`}><button type='submit' className='shadow'>Order</button></Link>
                 </div>)
             } else {
                 return (<h3>Sorry, we don't cook that yet!</h3>)
