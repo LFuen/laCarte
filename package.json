@@ -51,7 +51,7 @@
     "mocha": "^8.2.1"
   },
   "jest": {
-     "testRegex": "./test/.*.js$",
-     "rootDir": "."
+    "testRegex": "./test/.*.js$",
+    "rootDir": "."
   }
 }

@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import Nav from './Components/Nav/Nav';
+import Nav from '../Nav/Nav';
 import './App.css';
-import Footer from './Components/Footer/Footer';
-import api from './config';
-import LaCarteContext from './context/LaCarteContext.js';
+import Footer from '../Footer/Footer';
+import api from '../../config';
+import LaCarteContext from '../../context/LaCarteContext.js';
 class App extends Component {
 
   state = {

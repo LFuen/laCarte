@@ -6,13 +6,11 @@ import Home from '../Home/Home'
 import About from '../About/About'
 import MealPlan from '../MealPlan/MealPlan'
 import MealList from '../MealList/MealList'
-// import SignUp from './SignUp'
 import MealChoose from '../MealChoose/MealChoose'
 import OrderForm from '../OrderForm/OrderForm'
 import Cuisine from '../Cuisine/Cuisine'
 import Ingredients from '../Ingredients/Ingredients'
 import OrderPlaced from '../OrderPlaced/OrderPlaced'
-// import SignIn from './SignIn'
 import Welcome from '../Welcome/Welcome'
 import ChefBio from '../ChefBio/ChefBio'
 import LaCarteContext from '../../context/LaCarteContext'
@@ -48,7 +46,6 @@ class Nav extends Component {
             <Route exact path='/chefs/:chef' component={ChefBio}/>
             <Route exact path='/About' component={About}/>
             <Route exact path='/MealPlan' component={MealPlan}/>
-            {/* <Route exact path='/SignUp' component={SignUp}/> */}
             <Route exact path='/MealChoose' component={MealChoose}/>
             <Route exact path='/orders/:id' component={OrderForm}/>
             <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>
@@ -57,7 +54,6 @@ class Nav extends Component {
             <Route exact path='/OrderHistory' component={OrderHistory}/>
             <Route exact path='/orders/:id/:meal' component={OrderEdit}/>
             <Route exact path='/OrderUpdated' component={OrderUpdated}/>
-            {/* <Route exact path='/SignIn' component={SignIn}/> */}
             </BrowserRouter>
         )
     }
