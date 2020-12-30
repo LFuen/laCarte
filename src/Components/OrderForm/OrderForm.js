@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../../context/LaCarteContext'
-import {BrowserRouter, Link} from 'react-router-dom' 
+import {Link} from 'react-router-dom' 
 import api from '../../config'
 import './OrderForm.css'
 
@@ -75,7 +75,6 @@ class OrderForm extends Component{
             const order = meals.find(meal => meal.id === Number(idParam))
 
             return(
-            <BrowserRouter>
                 <div className='container'>
                     <div className='title'>
                         <h2>Order Form</h2>
@@ -118,7 +117,6 @@ class OrderForm extends Component{
                         </div>
                     </div>
                 </div>
-            </BrowserRouter>
         )} else {
             return (<h2>Loading..</h2>)
         }

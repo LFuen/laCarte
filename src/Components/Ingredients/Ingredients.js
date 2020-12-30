@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../../context/LaCarteContext'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './Ingredients.css'
 
 
@@ -30,7 +30,6 @@ class Ingredients extends Component{
 
             if (ingr) {
                 return (
-                <BrowserRouter>
                     <div className='page'>
                         <h1>{ingr.meal_name}</h1>
                         <img src={ingr.img_url} className='mealIng' alt={ingr.meal_name} title={ingr.meal_name}/>
@@ -55,7 +54,6 @@ class Ingredients extends Component{
                         </div>
                         <Link to={`/orders/${ingr.id}`}><button type='submit' className='shadow'>Order</button></Link>
                     </div>
-                </BrowserRouter>
                 )
             } else {
                 return (<h3>Sorry, we don't cook that yet!</h3>)

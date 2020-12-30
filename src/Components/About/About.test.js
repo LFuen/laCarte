@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import LaCarteContext from '../../context/LaCarteContext'
-import OrderPlaced from './OrderPlaced'
+import About from './About'
 
 
 
-describe(`OrderPlaced Component`, () => {
+describe(`About Component`, () => {
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             
-            const div = document.createElement('div');
+            const div = document.createElement('div')
 
             const value = {
                 meals: 'string',
@@ -23,7 +23,7 @@ describe(`OrderPlaced Component`, () => {
 
             ReactDOM.render(
                     <LaCarteContext.Provider value={value}>
-                        <OrderPlaced />
+                        <About />
                     </LaCarteContext.Provider>,
                 div)
             ReactDOM.unmountComponentAtNode(div)

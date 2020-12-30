@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../../context/LaCarteContext'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './Chefs.css'
 
 
@@ -11,7 +11,6 @@ class Chefs extends Component {
     render() {
         const {chefs} = this.context
         return (
-            <BrowserRouter>
                 <div className='chefPage'>
                     <h1 className='h1Chefs'>CHEFS</h1>
                     <div className='chefList'>
@@ -29,7 +28,6 @@ class Chefs extends Component {
                         </section>
                     </div>
                 </div> 
-            </BrowserRouter>
         )
     }
 }

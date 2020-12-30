@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Router, Route, NavLink, Switch} from 'react-router-dom'
+import {Route, NavLink} from 'react-router-dom'
 import Chefs from '../Chefs/Chefs'
 import About from '../About/About'
 import MealList from '../MealList/MealList'
@@ -24,39 +24,33 @@ class Nav extends Component {
     render() {
 
         return(
-            <Router>
-
-            <nav className='navigation' id='navbar'>
-                <NavLink to='/' className='navLink'>Home</NavLink>
-                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
-                <NavLink to='/MealChoose' className='navLink'>Selection</NavLink>
-                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
-                <NavLink to='/Chefs' className='navLink'>Chefs</NavLink>
-                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
-                <NavLink to='/OrderHistory' className='navLink'>Orders</NavLink>
-                <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
-                <NavLink to='/About' className='navLink'>About</NavLink>
-            </nav>
-
-            <Switch>
+            <div>
+                <nav className='navigation' id='navbar'>
+                    <NavLink to='/' className='navLink'>Home</NavLink>
+                    <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
+                    <NavLink to='/MealChoose' className='navLink'>Selection</NavLink>
+                    <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
+                    <NavLink to='/Chefs' className='navLink'>Chefs</NavLink>
+                    <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
+                    <NavLink to='/OrderHistory' className='navLink'>Orders</NavLink>
+                    <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
+                    <NavLink to='/About' className='navLink'>About</NavLink>
+                </nav>
+                
                 <Route exact path='/' component={Welcome}/>
                 <Route exact path='/MealList' component={MealList}/>
                 <Route exact path='/Chefs' component={Chefs}/>
+                <Route exact path='/chefs/:chef' component={ChefBio}/>
                 <Route exact path='/About' component={About}/>
                 <Route exact path='/MealChoose' component={MealChoose}/>
-                <Route exact path='/OrderPlaced' component={OrderPlaced}/>
-                <Route exact path='/OrderHistory' component={OrderHistory}/>
-                <Route exact path='/OrderUpdated' component={OrderUpdated}/>
-
-                {/* Routes with params */}
-                <Route exact path='/chefs/:chef' component={ChefBio}/> 
                 <Route exact path='/orders/:id' component={OrderForm}/>
                 <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>
-                <Route exact path='/meals/:id' component={Ingredients}/>      
+                <Route exact path='/meals/:id' component={Ingredients}/>
+                <Route exact path='/OrderPlaced' component={OrderPlaced}/>
+                <Route exact path='/OrderHistory' component={OrderHistory}/>
                 <Route exact path='/orders/:id/:meal' component={OrderEdit}/>
-            </Switch>
-
-            </Router>
+                <Route exact path='/OrderUpdated' component={OrderUpdated}/>
+            </div>
         )
     }
 }

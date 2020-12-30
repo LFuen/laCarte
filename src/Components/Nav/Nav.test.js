@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom';
 import LaCarteContext from '../../context/LaCarteContext'
 import Nav from './Nav'
 
@@ -22,9 +23,11 @@ describe(`Nav Component`, () => {
             };
 
             ReactDOM.render(
+                <BrowserRouter>
                     <LaCarteContext.Provider value={value}>
                         <Nav />
-                    </LaCarteContext.Provider>,
+                    </LaCarteContext.Provider>
+                </BrowserRouter>,
                 div);
             ReactDOM.unmountComponentAtNode(div);
         });

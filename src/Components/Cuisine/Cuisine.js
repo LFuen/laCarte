@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../../context/LaCarteContext'
-import {BrowserRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './Cuisine.css'
 
 
@@ -23,19 +23,17 @@ class Cuisine extends Component{
 
         if(cuisineOrg && cuisineMeals.length > 0){
         return(
-            <BrowserRouter>
-                <div className='dishes'>
-                    <h1 className='cuisineName' key={cuisineOrg}>{cuisineOrg.origin} Dishes</h1>
-                    {cuisineMeals.map(meal => {
-                        return (
-                        <div key={meal.id}>
-                            <Link to={`/meals/${meal.id}`}>
-                                <h4>{meal.meal_name}</h4>
-                            </Link>
-                        </div>
-                    )})}
-                </div>
-            </BrowserRouter>
+            <div className='dishes'>
+                <h1 className='cuisineName' key={cuisineOrg}>{cuisineOrg.origin} Dishes</h1>
+                {cuisineMeals.map(meal => {
+                    return (
+                    <div key={meal.id}>
+                        <Link to={`/meals/${meal.id}`}>
+                            <h4>{meal.meal_name}</h4>
+                        </Link>
+                    </div>
+                )})}
+            </div>
         )
         } else {
             return (<h3>Sorry, we don't offer that dish just yet!</h3>)

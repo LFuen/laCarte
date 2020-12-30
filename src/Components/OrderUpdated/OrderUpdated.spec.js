@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 import LaCarteContext from '../../context/LaCarteContext'
 import OrderUpdated from './OrderUpdated'
 
@@ -22,9 +23,11 @@ describe(`OrderUpdated Component`, () => {
             };
 
             ReactDOM.render(
+                <BrowserRouter>
                     <LaCarteContext.Provider value={value}>
                         <OrderUpdated />
-                    </LaCarteContext.Provider>,
+                    </LaCarteContext.Provider>                
+                </BrowserRouter>,
                 div)
             ReactDOM.unmountComponentAtNode(div)
         })

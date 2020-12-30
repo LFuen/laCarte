@@ -1,15 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 import LaCarteContext from '../../context/LaCarteContext'
-import About from './About'
+import OrderPlaced from './OrderPlaced'
 
 
 
-describe(`About Component`, () => {
+describe(`OrderPlaced Component`, () => {
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             
-            const div = document.createElement('div')
+            const div = document.createElement('div');
 
             const value = {
                 meals: 'string',
@@ -22,10 +23,12 @@ describe(`About Component`, () => {
             };
 
             ReactDOM.render(
+                <BrowserRouter>
                     <LaCarteContext.Provider value={value}>
-                        <About />
-                    </LaCarteContext.Provider>,
-                div);
+                        <OrderPlaced />
+                    </LaCarteContext.Provider>                
+                </BrowserRouter>,
+                div)
             ReactDOM.unmountComponentAtNode(div)
         })
     })
