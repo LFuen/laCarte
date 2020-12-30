@@ -86,10 +86,3 @@ h5 {
     BUTTON EFFECT 
 =================================
 */
-
-@media only screen and (max-width: 600px) {
-    .welcomePage {
-        width: 50%;
-        margin-top: 10px;
-    }
-}
