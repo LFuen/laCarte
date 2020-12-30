@@ -36,3 +36,7 @@ p.order {
 button.shadow {
     margin: 10px;
 }
+
+.noOrder {
+    margin-top: 50px;
+}

@@ -65,7 +65,7 @@ class OrderHistory extends Component{
                 </div>
             </div>
         )}else{
-            return (<h2 className>Go ahead, order something!</h2>)
+            return (<img alt='No Orders' className='noOrder' src='https://lfuen.github.io/laCarte/images/noOrder.png'/>)
         }
     }
 }
