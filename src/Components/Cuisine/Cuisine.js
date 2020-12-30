@@ -21,11 +21,11 @@ class Cuisine extends Component{
         const cuisineOrg = cuisines.length > 0 ? cuisines.find(cuisine => cuisine.origin === originParameter) : '';
         const cuisineMeals = meals.filter(meal => meal.cuisine_id === cuisineOrg.id);
 
-        if(cuisineOrg && cuisineMeals.length > 0){
+        if(cuisineOrg){
         return(
-            <div className='dishes'>
+            <div className='dishes' key={cuisineOrg.id}>
 
-                <h1 className='cuisineName' key={cuisineOrg.id}>{cuisineOrg.origin} Dishes</h1>
+                <h1 className='cuisineName'>{cuisineOrg.origin} Dishes</h1>
 
                 {cuisineMeals.map(meal => {
                     return (
