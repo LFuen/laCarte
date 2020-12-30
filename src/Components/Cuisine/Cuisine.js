@@ -27,9 +27,9 @@ class Cuisine extends Component{
 
                 <h1 className='cuisineName'>{cuisineOrg.origin} Dishes</h1>
 
-                {cuisineMeals.map(meal => {
+                {cuisineMeals.map((meal, idx) => {
                     return (
-                    <div key={meal.id}>
+                    <div key={idx}>
                         <Link to={`/meals/${meal.id}`}>
                             <h4>{meal.meal_name}</h4>
                         </Link>
