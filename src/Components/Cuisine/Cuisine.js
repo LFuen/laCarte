@@ -25,7 +25,7 @@ class Cuisine extends Component{
         return(
             <div className='dishes'>
 
-                <h1 className='cuisineName'>{cuisineOrg.origin} Dishes</h1>
+                <h1 className='cuisineName' key={cuisineOrg.id}>{cuisineOrg.origin} Dishes</h1>
 
                 {cuisineMeals.map(meal => {
                     return (
