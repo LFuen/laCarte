@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import './OrderHistory.css'
 import api from '../../config'
 import LaCarteContext from '../../context/LaCarteContext'
-import {Link} from 'react-router-dom'
+import {BrowserRouter, Link} from 'react-router-dom'
+import './OrderHistory.css'
 
 
 class OrderHistory extends Component{
@@ -48,21 +48,23 @@ class OrderHistory extends Component{
         const {orders} = this.context
         
         return(
-        <div className='list'>
-            <div className='allOrders'>
-                {orders.map(order => { return (
-                <div key={order.id} className='eachOrder'>
-                <h4>{order.meal}</h4>
-                <p className='order'>Address: {order.prim_add}</p>
-                <p className='order'>Phone: {order.phone}</p>
-                <Link to={`/orders/${order.id}/${order.meal}`}><button type='button' className='shadow'>Edit</button></Link>
-                <button type='button' className='shadow' onClick={() => this.clickDelete(order.id)}>
-                        Delete
-                </button>
+            <BrowserRouter>
+                <div className='list'>
+                    <div className='allOrders'>
+                        {orders.map(order => { return (
+                        <div key={order.id} className='eachOrder'>
+                            <h4>{order.meal}</h4>
+                            <p className='order'>Address: {order.prim_add}</p>
+                            <p className='order'>Phone: {order.phone}</p>
+                            <Link to={`/orders/${order.id}/${order.meal}`}><button type='button' className='shadow'>Edit</button></Link>
+                            <button type='button' className='shadow' onClick={() => this.clickDelete(order.id)}>
+                                    Delete
+                            </button>
+                        </div>
+                        )})}            
+                    </div>
                 </div>
-                )})}            
-            </div>
-        </div>
+            </BrowserRouter>
         )
     }
 }

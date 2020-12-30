@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Route, NavLink} from 'react-router-dom'
-import './Nav.css'
 import Chefs from '../Chefs/Chefs'
 import About from '../About/About'
 import MealList from '../MealList/MealList'
@@ -15,7 +14,7 @@ import LaCarteContext from '../../context/LaCarteContext'
 import OrderHistory from '../OrderHistory/OrderHistory'
 import OrderEdit from '../OrderEdit/OrderEdit'
 import OrderUpdated from '../OrderUpdated/OrderUpdated'
-
+import './Nav.css'
 
 
 class Nav extends Component {
@@ -26,6 +25,7 @@ class Nav extends Component {
 
         return(
             <BrowserRouter>
+
             <nav className='navigation' id='navbar'>
                 <NavLink to='/' className='navLink'>Home</NavLink>
                 <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
@@ -37,6 +37,7 @@ class Nav extends Component {
                 <span title='La Carte'><img className='chefHat' alt='chef' src='https://lfuen.github.io/laCarte/images/chef.png'/></span>
                 <NavLink to='/About' className='navLink'>About</NavLink>
             </nav>
+
             <Route exact path='/' component={Welcome}/>
             <Route exact path='/MealList' component={MealList}/>
             <Route exact path='/Chefs' component={Chefs}/>
@@ -50,6 +51,7 @@ class Nav extends Component {
             <Route exact path='/OrderHistory' component={OrderHistory}/>
             <Route exact path='/orders/:id/:meal' component={OrderEdit}/>
             <Route exact path='/OrderUpdated' component={OrderUpdated}/>
+            
             </BrowserRouter>
         )
     }

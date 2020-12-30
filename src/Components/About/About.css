@@ -1,4 +1,4 @@
-.aboutTitle{
+.aboutTitle {
     margin: 0 0 0 0;
     font-size: 40px;
 }
@@ -56,12 +56,12 @@
     color: black;
 }
 
-.about{
+.about {
     width: 100%;
     margin: 1.5rem auto 100px;
 }
 
-.paragraph{
+.paragraph {
     background-color:rgb(233, 111, 111);
     border: 3px solid aliceblue;
     border-radius: 50px;

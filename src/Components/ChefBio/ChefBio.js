@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import LaCarteContext from '../../context/LaCarteContext'
 import './ChefBio.css'
 
+
 class ChefBio extends Component {
 
     static defaultProps = {
@@ -14,9 +15,9 @@ class ChefBio extends Component {
 
     render() {
 
-        const {chefs} = this.context;
-        const chefParam = this.props.match.params.chef;
-        const individual = chefs.length > 0 ? chefs.find(chef => chef.chef_name === chefParam) : '';
+        const {chefs} = this.context
+        const chefParam = this.props.match.params.chef
+        const individual = chefs.length > 0 ? chefs.find(chef => chef.chef_name === chefParam) : ''
 
     if(chefs.length > 0) {
         let cuisines = individual.cuisine.substring(1)

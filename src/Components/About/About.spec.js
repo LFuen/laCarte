@@ -9,7 +9,7 @@ describe(`About Component`, () => {
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             
-            const div = document.createElement('div');
+            const div = document.createElement('div')
 
             const value = {
                 meals: 'string',
@@ -26,7 +26,7 @@ describe(`About Component`, () => {
                         <About />
                     </LaCarteContext.Provider>,
                 div);
-            ReactDOM.unmountComponentAtNode(div);
-        });
+            ReactDOM.unmountComponentAtNode(div)
+        })
     })
-});
+})

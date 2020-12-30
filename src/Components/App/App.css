@@ -8,32 +8,6 @@
   font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-header {
-    background-color: #282c3400;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-
-  .App-link {
-    color: #61dafb;
-  }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
 a {
   color:rgb(0, 0, 0);
   font-size: 40px;
@@ -74,7 +48,6 @@ a:focus {
   border-radius: 10px;
 }
 
-/* Standard stuff, if you care to do that. */
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
@@ -96,3 +69,47 @@ body {
   background-color: var(--thumbBG);
   box-shadow: -100vh 0 0 100vh var(--shadow), 0 0 15px 5px black;
 }
+
+/* 
+========================================
+            SCROLLBAR
+======================================== 
+*/
+
+/* 
+========================================
+            MEDIA QUERY
+======================================== 
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-header {
+    background-color: #282c3400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* 
+========================================
+            MEDIA QUERY
+======================================== 
+*/

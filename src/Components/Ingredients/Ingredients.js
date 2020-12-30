@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import './Ingredients.css'
 import LaCarteContext from '../../context/LaCarteContext'
-import {Link} from 'react-router-dom'
+import {BrowserRouter, Link} from 'react-router-dom'
+import './Ingredients.css'
+
 
 class Ingredients extends Component{
     
@@ -29,30 +30,33 @@ class Ingredients extends Component{
 
             if (ingr) {
                 return (
-                <div className='page'>
-                    <h1>{ingr.meal_name}</h1>
-                    <img src={ingr.img_url} className='mealIng' alt={ingr.meal_name} title={ingr.meal_name}/>
-                    <div className='group'> 
-                        <div className='ingredients'>
-                            <h2>Ingredients:</h2>
-                            {ingredients.map((list, idx) => { return (
-                                <p key={idx} className='listing'>{list}</p>
-                            )})}
-                        </div>                        
-                        <br/>
-                        <div className='chefs'>                        
-                            <h2>Chefs</h2>             
-                            <p className='listing'>Who would You like to prepare your meal?</p>                
+                <BrowserRouter>
+                    <div className='page'>
+                        <h1>{ingr.meal_name}</h1>
+                        <img src={ingr.img_url} className='mealIng' alt={ingr.meal_name} title={ingr.meal_name}/>
+                        <div className='group'> 
+                            <div className='ingredients'>
+                                <h2>Ingredients:</h2>
+                                {ingredients.map((list, idx) => { return (
+                                    <p key={idx} className='listing'>{list}</p>
+                                )})}
+                            </div>                        
+                            <br/>
+                            <div className='chefs'>                        
+                                <h2>Chefs</h2>             
+                                <p className='listing'>Who would You like to prepare your meal?</p>                
 
-                            {chefs.map((chef, idx) => {return (
-                            <label key={idx}>
-                                <input type='radio' value={chef} required/><br/><p className='listing'>{chef}</p>
-                            </label>
-                            )})}
-                        </div>                        
+                                {chefs.map((chef, idx) => {return (
+                                    <label key={idx}>
+                                        <input type='radio' value={chef} required/><br/><p className='listing'>{chef}</p>
+                                    </label>
+                                )})}
+                            </div>                        
+                        </div>
+                        <Link to={`/orders/${ingr.id}`}><button type='submit' className='shadow'>Order</button></Link>
                     </div>
-                    <Link to={`/orders/${ingr.id}`}><button type='submit' className='shadow'>Order</button></Link>
-                </div>)
+                </BrowserRouter>
+                )
             } else {
                 return (<h3>Sorry, we don't cook that yet!</h3>)
             }

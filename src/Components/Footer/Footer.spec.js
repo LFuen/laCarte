@@ -9,7 +9,7 @@ describe(`Footer Component`, () => {
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             
-            const div = document.createElement('div');
+            const div = document.createElement('div')
 
             const value = {
                 meals: 'string',
@@ -25,8 +25,8 @@ describe(`Footer Component`, () => {
                     <LaCarteContext.Provider value={value}>
                         <Footer />
                     </LaCarteContext.Provider>,
-                div);
-            ReactDOM.unmountComponentAtNode(div);
-        });
+                div)
+            ReactDOM.unmountComponentAtNode(div)
+        })
     })
-});
+})

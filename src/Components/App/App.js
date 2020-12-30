@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
-import Nav from '../Nav/Nav';
-import './App.css';
-import Footer from '../Footer/Footer';
-import api from '../../config';
-import LaCarteContext from '../../context/LaCarteContext.js';
+import Nav from '../Nav/Nav'
+import Footer from '../Footer/Footer'
+import api from '../../config'
+import LaCarteContext from '../../context/LaCarteContext.js'
+import './App.css'
+
+
 class App extends Component {
 
   state = {
@@ -130,7 +132,6 @@ class App extends Component {
     this.getCuisines();
     this.getOrders();
   }
-
 
 
 

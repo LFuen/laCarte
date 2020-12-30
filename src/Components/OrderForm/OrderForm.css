@@ -1,5 +1,5 @@
 
-.container{
+.container {
   display: flex;
   align-self: center;
   margin-top: 25px;
@@ -12,7 +12,7 @@ button.shadow:focus {
   border: 3px solid rgb(0, 0, 0);
 }
 
-div.d-flex{
+div.d-flex {
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -30,7 +30,7 @@ div.d-flex{
   width: 100%;
 }
 
-.title{
+.title {
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgb(233, 111, 111)), color-stop(100, #5e0202));
   background: -moz-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
   background: -ms-linear-gradient(top left, rgb(233, 111, 111) 0%, #ffffff 100%);
@@ -45,26 +45,26 @@ div.d-flex{
   text-shadow: 2px 2px rgb(80, 80, 80);
   width: 60%;
 }
-h2{
+
+h2 {
   margin: 0;
   padding-left: 15px; 
   text-decoration: none;
 }
 
-label, table{
+label, table {
   display: block;
   margin: 15px;
 }
-label>span{
+
+label>span {
   width: 50%;
   align-self: center;
   margin-top: 12px;
   padding-right: 10px;
 }
 
-
-form input
-{
+form input {
   text-align: center;
   width: 70%;
   height: 30px;
@@ -76,48 +76,52 @@ form input
   background-color: black;
 }
 
-select{
+select {
   width: 72%;
   height: 45px;
   padding: 5px 10px;
   margin-bottom: 10px;
 }
 
-table{
+table {
   margin: 0;
   padding: 0;
 }
-th{
+
+th {
   border-bottom: 1px solid #dadada;
   padding: 10px 0;
 }
-tr>td:nth-child(1){
+
+tr>td:nth-child(1) {
   text-align: center;
   color:rgb(136, 136, 136);
 }
-tr>td:nth-child(2){
+
+tr>td:nth-child(2) {
   text-align: center;
   color:rgb(136, 136, 136);
 }
-td{
+
+td {
   border-bottom: 5px solid #dadada;
   padding: 25px 25px 25px 0;
 }
 
-p{
+p {
   display: block;
   color:rgb(136, 136, 136);
   margin: 0;
   padding-left: 25px;
 }
-.Yorder>div{
+
+.Yorder>div {
   padding: 5px 0; 
 }
 
 
-@media (min-width: 1200px)
-{
+@media (max-width: 600px) {
   .container{
-    max-width: 1140px;
+      max-width: 90%;
   }
 }

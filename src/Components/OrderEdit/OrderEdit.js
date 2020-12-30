@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../../context/LaCarteContext'
-import '../OrderForm/OrderForm.css'
 import PropTypes from 'prop-types'
 import api from '../../config'
-
+import '../OrderForm/OrderForm.css'
 
 
 class OrderEdit extends Component{
@@ -58,7 +57,6 @@ class OrderEdit extends Component{
             this.props.history.push('/OrderUpdated')
         })
         .catch(error => {
-
             this.setState({error})
         })
     }
@@ -77,40 +75,40 @@ class OrderEdit extends Component{
                 <div className='title'>
                     <h2>Change Order</h2>
                     <div className='d-flex'>
-                    <form onSubmit={this.handleSubmit} method='' className='orderForm'>
-                        <label>
-                        <span>Meal</span><br/>
-                        <input id='meal' type='text' name='meal' value={order.meal} required readOnly/>
-                        </label>
-                        <label>
-                        <span>Street Address *</span><br/>
-                        <input id='houseadd' type='text' name='houseadd' placeholder='House number and street name' required/>
-                        </label>
-                        <label>
-                        <span>Address 2</span><br/>
-                        <input id='apartment' type='text' name='apartment' placeholder='Apartment, suite, unit etc. (optional)'/>
-                        </label>
-                        <label>
-                        <span>City *</span><br/>
-                        <input id='city' type='text' name='city' placeholder='City'/> 
-                        </label>
-                        <label>
-                        <span>State / County *</span><br/>
-                        <input id='state' type='text' name='state' placeholder='State'/> 
-                        </label>
-                        <label>
-                        <span>Postcode / ZIP *</span><br/>
-                        <input id='zip' type='text' name='zip' pattern='[0-9]{5}' placeholder='Zip Code'/> 
-                        </label>
-                        <label>
-                        <span>Phone *</span><br/>
-                        <input id='tel' type='tel' name='tel' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' placeholder='000-000-000'/>
-                        </label>
-                        <button type='submit' className='shadow'>
-                            Save Order
-                        </button>
-                    </form>
-                </div>
+                        <form onSubmit={this.handleSubmit} method='' className='orderForm'>
+                            <label>
+                            <span>Meal</span><br/>
+                            <input id='meal' type='text' name='meal' value={order.meal} required readOnly/>
+                            </label>
+                            <label>
+                            <span>Street Address *</span><br/>
+                            <input id='houseadd' type='text' name='houseadd' placeholder='House number and street name' required/>
+                            </label>
+                            <label>
+                            <span>Address 2</span><br/>
+                            <input id='apartment' type='text' name='apartment' placeholder='Apartment, suite, unit etc. (optional)'/>
+                            </label>
+                            <label>
+                            <span>City *</span><br/>
+                            <input id='city' type='text' name='city' placeholder='City'/> 
+                            </label>
+                            <label>
+                            <span>State / County *</span><br/>
+                            <input id='state' type='text' name='state' placeholder='State'/> 
+                            </label>
+                            <label>
+                            <span>Postcode / ZIP *</span><br/>
+                            <input id='zip' type='text' name='zip' pattern='[0-9]{5}' placeholder='Zip Code'/> 
+                            </label>
+                            <label>
+                            <span>Phone *</span><br/>
+                            <input id='tel' type='tel' name='tel' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' placeholder='000-000-000'/>
+                            </label>
+                            <button type='submit' className='shadow'>
+                                Save Order
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         )} else {
