@@ -62,7 +62,6 @@ class OrderForm extends Component{
             this.props.history.push('/OrderPlaced')
         })
         .catch(error => {
-            console.log(error)
             this.setState({error})
         })
     }
@@ -76,8 +75,7 @@ class OrderForm extends Component{
 
         if(meals.length > 0){
             const idParam = this.props.match.params.id
-            const order = meals.find(meal => meal.id === Number(idParam));
-            console.log('HIT ORDER FORM');
+            const order = meals.find(meal => meal.id === Number(idParam))
 
             return(
             <div className='container'>

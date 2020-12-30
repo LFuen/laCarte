@@ -17,7 +17,6 @@ class ChefBio extends Component {
         const {chefs} = this.context;
         const chefParam = this.props.match.params.chef;
         const individual = chefs.length > 0 ? chefs.find(chef => chef.chef_name === chefParam) : '';
-        console.log(individual.schedule)
 
     if(chefs.length > 0) {
         let cuisines = individual.cuisine.substring(1)

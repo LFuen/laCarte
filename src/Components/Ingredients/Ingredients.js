@@ -22,7 +22,6 @@ class Ingredients extends Component{
             let listing = ingr.ingredients.substring(1)
             listing = listing.slice(0, -1)
             let ingredients = listing.split(',')
-            console.log(ingredients)
 
             let chefList = ingr.chef.substring(1)
             chefList = chefList.slice(0, -1)

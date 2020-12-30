@@ -58,7 +58,7 @@ class OrderEdit extends Component{
             this.props.history.push('/OrderUpdated')
         })
         .catch(error => {
-            console.log(error)
+
             this.setState({error})
         })
     }
