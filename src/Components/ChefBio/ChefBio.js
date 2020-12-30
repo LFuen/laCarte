@@ -39,15 +39,15 @@ class ChefBio extends Component {
                 <div className='foodSched'>
                     <div className='cuisine'>
                         <h3>Cuisines</h3>
-                        {cuisine.map(origin => { return (
-                        <p>{origin}</p>                    
+                        {cuisine.map((origin, idx) => { return (
+                        <p key={idx}>{origin}</p>                    
                         )})}                    
                     </div>
 
                     <div className='schedule' >
                         <h3>Schedule</h3>
-                        {schedule.map(days => { return (
-                        <p>{days}</p>                    
+                        {schedule.map((days, idx) => { return (
+                        <p key={idx}>{days}</p>                    
                         )})}                    
                     </div>                    
                 </div>
