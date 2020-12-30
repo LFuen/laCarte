@@ -22,7 +22,7 @@ The Healthy-Meal-Alternative App for the Busy Professional.
 
 <br/>
 <p>This is the client side of the application which uses React as it's front end. Context is being used throughout the application in order to manage state.
- Knex is what is connecting my server and my client together. I have incorporated smoketesting and snapshot testing inside of my client application.</p>
+ Knex is what is connecting my server and my client together. I have incorporated smoke testing and snapshot testing inside of my client application.</p>
 <br/>
 
 
