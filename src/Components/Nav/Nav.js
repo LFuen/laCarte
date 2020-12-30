@@ -41,17 +41,18 @@ class Nav extends Component {
             <Route exact path='/' component={Welcome}/>
             <Route exact path='/MealList' component={MealList}/>
             <Route exact path='/Chefs' component={Chefs}/>
-            <Route exact path='/chefs/:chef' component={ChefBio}/>
             <Route exact path='/About' component={About}/>
             <Route exact path='/MealChoose' component={MealChoose}/>
-            <Route exact path='/orders/:id' component={OrderForm}/>
-            <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>
-            <Route exact path='/meals/:id' component={Ingredients}/>
             <Route exact path='/OrderPlaced' component={OrderPlaced}/>
             <Route exact path='/OrderHistory' component={OrderHistory}/>
-            <Route exact path='/orders/:id/:meal' component={OrderEdit}/>
             <Route exact path='/OrderUpdated' component={OrderUpdated}/>
-            
+
+            {/* Routes with params */}
+            <Route exact path='/chefs/:chef' component={ChefBio}/> 
+            <Route exact path='/orders/:id' component={OrderForm}/>
+            <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>
+            <Route exact path='/meals/:id' component={Ingredients}/>      
+            <Route exact path='/orders/:id/:meal' component={OrderEdit}/>                             
             </BrowserRouter>
         )
     }
