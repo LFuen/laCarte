@@ -29,12 +29,3 @@
     transform: scaleX(1);
 } */
 
-@media screen and (max-width: 600px) {
-    .navigation.responsive {position: relative;}
-
-    .navigation.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}

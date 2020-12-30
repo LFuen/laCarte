@@ -34,3 +34,9 @@ code {
   flex: 1 0 auto;
   padding: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    width: fit-content;
+  }
+}
