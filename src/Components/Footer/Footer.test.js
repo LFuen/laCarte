@@ -1,11 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
 import LaCarteContext from '../../context/LaCarteContext'
 import Footer from './Footer'
 
 
 
 describe(`Footer Component`, () => {
+    describe(`Snapshot`, () => {
+        it('renders the UI as expected', () => {
+            const foot = renderer.create(<Footer />).toJSON()
+            expect(foot).toMatchSnapshot()
+        })
+    })
+
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             

@@ -1,11 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
 import LaCarteContext from '../../context/LaCarteContext'
 import Welcome from './Welcome'
 
 
 
 describe(`Welcome Component`, () => {
+    describe(`Snapshot`, () => {
+        it(`renders the UI as expected`, () => {
+            const welcome = renderer.create(<Welcome/>)
+                expect(welcome).toMatchSnapshot()
+        })
+    })
+
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             

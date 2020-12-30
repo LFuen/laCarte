@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chefs Component Snapshot renders the UI as expected 1`] = `
+<div
+  className="chefPage"
+>
+  <h1
+    className="h1Chefs"
+  >
+    CHEFS
+  </h1>
+  <div
+    className="chefList"
+  >
+    <section
+      className="contain"
+    >
+      <div
+        className="chefImageContainer"
+      >
+        <span
+          title="Chef!"
+        >
+          <img
+            alt="chefMoji"
+            src="https://lfuen.github.io/laCarte/images/chefmoji.png"
+          />
+        </span>
+      </div>
+      <div
+        className="box"
+      />
+    </section>
+  </div>
+</div>
+`;

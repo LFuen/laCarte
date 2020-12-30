@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
 import { BrowserRouter } from 'react-router-dom'
 import LaCarteContext from '../../context/LaCarteContext'
 import OrderUpdated from './OrderUpdated'
@@ -7,6 +8,13 @@ import OrderUpdated from './OrderUpdated'
 
 
 describe(`OrderUpdated Component`, () => {
+    describe(`Snapshot`, () => {
+        it(`renders the UI as expected`, () => {
+            const update = renderer.create(<BrowserRouter><OrderUpdated/></BrowserRouter>)
+                expect(update).toMatchSnapshot()            
+        })
+    })
+
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             

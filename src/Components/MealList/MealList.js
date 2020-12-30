@@ -14,7 +14,7 @@ class MealList extends Component {
                 {meals.map(meal => { return (
                     <Link to={`/meals/${meal.id}`} key={meal.id}>
                         <div className='polaroid'>
-                            <span title={meal.meal_name}>
+                            <span title='Pick Me!'>
                                 <img className='chefMoji' alt={meal.meal_name} src={meal.img_url}/>
                             </span>
                             <div className='container'>

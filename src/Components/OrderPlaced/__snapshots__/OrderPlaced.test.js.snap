@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderPlaced Component Snapshot renders the UI as expected 1`] = `
+<div
+  className="flexed"
+>
+  <a
+    href="/MealChoose"
+    onClick={[Function]}
+  >
+    <button
+      className="shadow"
+      type="button"
+    >
+      Schedule Next Meal
+    </button>
+  </a>
+  <span
+    className="flexedMid"
+    title="Received"
+  >
+    <img
+      alt="orderReceived"
+      className="order"
+      src="https://lfuen.github.io/laCarte/images/Order.png"
+    />
+  </span>
+  <a
+    href="/OrderHistory"
+    onClick={[Function]}
+  >
+    <button
+      className="shadow"
+      type="button"
+    >
+      View/Edit Order
+    </button>
+  </a>
+</div>
+`;

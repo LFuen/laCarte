@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Component Snapshot renders the UI as expected 1`] = `
+<div>
+  <nav
+    className="navigation"
+    id="navbar"
+  >
+    <a
+      aria-current="page"
+      className="navLink active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <span
+      title="La Carte"
+    >
+      <img
+        alt="chef"
+        className="chefHat"
+        src="https://lfuen.github.io/laCarte/images/chef.png"
+      />
+    </span>
+    <a
+      aria-current={null}
+      className="navLink"
+      href="/MealChoose"
+      onClick={[Function]}
+    >
+      Selection
+    </a>
+    <span
+      title="La Carte"
+    >
+      <img
+        alt="chef"
+        className="chefHat"
+        src="https://lfuen.github.io/laCarte/images/chef.png"
+      />
+    </span>
+    <a
+      aria-current={null}
+      className="navLink"
+      href="/Chefs"
+      onClick={[Function]}
+    >
+      Chefs
+    </a>
+    <span
+      title="La Carte"
+    >
+      <img
+        alt="chef"
+        className="chefHat"
+        src="https://lfuen.github.io/laCarte/images/chef.png"
+      />
+    </span>
+    <a
+      aria-current={null}
+      className="navLink"
+      href="/OrderHistory"
+      onClick={[Function]}
+    >
+      Orders
+    </a>
+    <span
+      title="La Carte"
+    >
+      <img
+        alt="chef"
+        className="chefHat"
+        src="https://lfuen.github.io/laCarte/images/chef.png"
+      />
+    </span>
+    <a
+      aria-current={null}
+      className="navLink"
+      href="/About"
+      onClick={[Function]}
+    >
+      About
+    </a>
+  </nav>
+  <div
+    className="welcomePage"
+  >
+    <span
+      title="La Carte"
+    >
+      <img
+        alt="LaCarte"
+        className="titleImage"
+        src="https://lfuen.github.io/laCarte/images/laCarteFont.png"
+      />
+    </span>
+    <h3
+      className="worked"
+    >
+      The Healthy-Meal-Alternative App for the Busy Professional.
+    </h3>
+    <h5>
+      (We didn't say workaholic, you did.)
+    </h5>
+    <div
+      className="flexed"
+    >
+      <span
+        title="Bon Apetit!"
+      >
+        <img
+          alt="laCarte"
+          className="mainImage"
+          src="https://lfuen.github.io/laCarte/images/laCarte.png"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;

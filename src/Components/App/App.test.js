@@ -1,18 +1,35 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
 
-it('renders without crashing', () => {
+describe(`App component`, () => {
+  describe(`Snapshot`, () => {
+    it('renders the UI as expected', () => {
+      const app = renderer.create(<BrowserRouter><App /></BrowserRouter>).toJSON()
+          expect(app).toMatchSnapshot()
+    })
+  })
 
-  const div = document.createElement('div')
+  describe(`Smoke test`, () => {
+    it('renders without crashing', () => {
 
-  ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>, 
-    div)
-  ReactDOM.unmountComponentAtNode(div)
+      const div = document.createElement('div')
 
+      ReactDOM.render(
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>, 
+        div)
+      ReactDOM.unmountComponentAtNode(div)
+
+    })
+  })
 })
+
+
+
+
+

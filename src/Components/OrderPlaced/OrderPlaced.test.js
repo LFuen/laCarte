@@ -1,16 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import renderer from 'react-test-renderer'
+import ShallowRenderer from 'react-test-renderer/shallow'
+import {BrowserRouter} from 'react-router-dom'
 import LaCarteContext from '../../context/LaCarteContext'
 import OrderPlaced from './OrderPlaced'
 
 
 
 describe(`OrderPlaced Component`, () => {
+    describe(`Snapshot`, () => {
+        it(`renders the UI as expected`, () => {
+            const placed = renderer.create(<BrowserRouter><OrderPlaced/></BrowserRouter>)
+                expect(placed).toMatchSnapshot()
+        })
+    })
+
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             
             const div = document.createElement('div');
+            const renderer = new ShallowRenderer()
 
             const value = {
                 meals: 'string',
@@ -22,7 +32,7 @@ describe(`OrderPlaced Component`, () => {
                 deleteOrder: 'string',
             };
 
-            ReactDOM.render(
+            renderer.render(
                 <BrowserRouter>
                     <LaCarteContext.Provider value={value}>
                         <OrderPlaced />

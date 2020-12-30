@@ -1,23 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
+import ShallowRenderer from 'react-test-renderer/shallow'
+import {BrowserRouter} from 'react-router-dom'
 import LaCarteContext from '../../context/LaCarteContext'
-import About from './About'
+import Chefs from './Chefs'
 
 
 
-describe(`About Component`, () => {
+describe(`Chefs Component`, () => {
     describe(`Snapshot`, () => {
-        it('renders the UI as expected', () => {
-            const about = renderer.create(<About />).toJSON()
-                expect(about).toMatchSnapshot()
+        it(`renders the UI as expected`, () => {
+            const chefs = renderer.create(<BrowserRouter><Chefs/></BrowserRouter>)
+                expect(chefs).toMatchSnapshot()
         })
     })
 
     describe(`Smoke test`, () => {
         it(`Renders without crashing`, () => {
             
-            const div = document.createElement('div')
+            const div = document.createElement('div');
+            const renderer = new ShallowRenderer()
 
             const value = {
                 meals: 'string',
@@ -29,10 +32,12 @@ describe(`About Component`, () => {
                 deleteOrder: 'string',
             };
 
-            ReactDOM.render(
+            renderer.render(
+                <BrowserRouter>
                     <LaCarteContext.Provider value={value}>
-                        <About />
-                    </LaCarteContext.Provider>,
+                        <Chefs />
+                    </LaCarteContext.Provider>                
+                </BrowserRouter>,
                 div)
             ReactDOM.unmountComponentAtNode(div)
         })

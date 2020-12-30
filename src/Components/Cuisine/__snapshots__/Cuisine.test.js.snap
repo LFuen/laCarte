@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cuisine Component Snapshot renders the UI as expected 1`] = `
+<h3>
+  Sorry, we don't offer that dish just yet!
+</h3>
+`;

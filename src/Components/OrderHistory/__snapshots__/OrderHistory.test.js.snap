@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderHistory Component Snapshot renders the UI as expected 1`] = `
+<div
+  className="list"
+>
+  <div
+    className="allOrders"
+  />
+</div>
+`;
