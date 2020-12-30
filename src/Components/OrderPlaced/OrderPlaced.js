@@ -12,7 +12,7 @@ class OrderPlaced extends Component{
                     <span title='Received' className='flexedMid'>
                         <img className='order' alt='orderReceived' src='https://lfuen.github.io/laCarte/images/Order.png'/>
                     </span>    
-                    <Link to='/OrderHistory'><button type='button' className='shadow'>View/Edit Order</button></Link>
+                <Link to='/OrderHistory'><button type='button' className='shadow'>View/Edit Order</button></Link>
             </div>
         )
     }
