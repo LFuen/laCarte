@@ -19,13 +19,13 @@ class Cuisine extends Component{
         const {meals, cuisines} = this.context;
         const originParameter = this.props.match.params.origin;
         const cuisineOrg = cuisines.length > 0 ? cuisines.find(cuisine => cuisine.origin === originParameter) : '';
-        const cuisineMeals = meals.filter(meal => meal.cuisine_id === cuisineOrg.id);
+        const cuisineMeals = meals.filter(meal => meal.cuisine_id === cuisineOrg.id)
 
-        if(cuisineOrg){
+        if(cuisineOrg && cuisineMeals.length > 0){
         return(
-            <div className='dishes' key={cuisineOrg.id}>
+            <div className='dishes'>
 
-                <h1 className='cuisineName'>{cuisineOrg.origin} Dishes</h1>
+                <h1 className='cuisineName' key={cuisineOrg}>{cuisineOrg.origin} Dishes</h1>
 
                 {cuisineMeals.map(meal => {
                     return (

@@ -9,8 +9,8 @@ class About extends Component {
                 <div className='about'>
                     <div className='quote--container'>
                         <p className='quote'>
-                        We all <span className='quote--highlight'>eat</span>&hellip; and it would be a sad waste of opportunity to eat <span className='quote--highlight'>badly</span>. 
-                        </p>
+                        We all <span className='quote--highlight'>eat</span>&hellip; 
+                        and it would be a sad waste of opportunity to eat <span className='quote--highlight'>badly</span>.</p>
                         <p className='quote--author'>&ndash; Anna Thomas</p>
                     </div>
 
