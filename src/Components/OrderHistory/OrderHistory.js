@@ -47,7 +47,7 @@ class OrderHistory extends Component{
 
         const {orders} = this.context
         
-        if(orders.length <= 0){
+        if(orders.length > 0){
         return(
             <div className='list'>
                 <div className='allOrders'>
@@ -64,7 +64,7 @@ class OrderHistory extends Component{
                     )})}            
                 </div>
             </div>
-        )}else{
+        )}else if(orders.length <= 0){
             return (<img alt='No Orders' className='noOrder' src='https://lfuen.github.io/laCarte/images/noOrder.png'/>)
         }
     }
