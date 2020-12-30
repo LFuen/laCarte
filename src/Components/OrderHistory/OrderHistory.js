@@ -47,7 +47,7 @@ class OrderHistory extends Component{
 
         const {orders} = this.context
         
-        if(orders.length > 0){
+        if(orders.length <= 0){
         return(
             <div className='list'>
                 <div className='allOrders'>
