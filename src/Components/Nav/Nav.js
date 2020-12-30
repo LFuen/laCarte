@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {BrowserRouter, Route, NavLink} from 'react-router-dom'
+import {Router, Route, NavLink, Switch} from 'react-router-dom'
 import Chefs from '../Chefs/Chefs'
 import About from '../About/About'
 import MealList from '../MealList/MealList'
@@ -24,7 +24,7 @@ class Nav extends Component {
     render() {
 
         return(
-            <BrowserRouter>
+            <Router>
 
             <nav className='navigation' id='navbar'>
                 <NavLink to='/' className='navLink'>Home</NavLink>
@@ -38,22 +38,25 @@ class Nav extends Component {
                 <NavLink to='/About' className='navLink'>About</NavLink>
             </nav>
 
-            <Route exact path='/' component={Welcome}/>
-            <Route exact path='/MealList' component={MealList}/>
-            <Route exact path='/Chefs' component={Chefs}/>
-            <Route exact path='/About' component={About}/>
-            <Route exact path='/MealChoose' component={MealChoose}/>
-            <Route exact path='/OrderPlaced' component={OrderPlaced}/>
-            <Route exact path='/OrderHistory' component={OrderHistory}/>
-            <Route exact path='/OrderUpdated' component={OrderUpdated}/>
+            <Switch>
+                <Route exact path='/' component={Welcome}/>
+                <Route exact path='/MealList' component={MealList}/>
+                <Route exact path='/Chefs' component={Chefs}/>
+                <Route exact path='/About' component={About}/>
+                <Route exact path='/MealChoose' component={MealChoose}/>
+                <Route exact path='/OrderPlaced' component={OrderPlaced}/>
+                <Route exact path='/OrderHistory' component={OrderHistory}/>
+                <Route exact path='/OrderUpdated' component={OrderUpdated}/>
 
-            {/* Routes with params */}
-            <Route exact path='/chefs/:chef' component={ChefBio}/> 
-            <Route exact path='/orders/:id' component={OrderForm}/>
-            <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>
-            <Route exact path='/meals/:id' component={Ingredients}/>      
-            <Route exact path='/orders/:id/:meal' component={OrderEdit}/>                             
-            </BrowserRouter>
+                {/* Routes with params */}
+                <Route exact path='/chefs/:chef' component={ChefBio}/> 
+                <Route exact path='/orders/:id' component={OrderForm}/>
+                <Route exact path='/cuisines/:id/:origin' component={Cuisine}/>
+                <Route exact path='/meals/:id' component={Ingredients}/>      
+                <Route exact path='/orders/:id/:meal' component={OrderEdit}/>
+            </Switch>
+
+            </Router>
         )
     }
 }
