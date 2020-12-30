@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import LaCarteContext from '../../context/LaCarteContext'
-import {Router, Link} from 'react-router-dom'
+import {BrowserRouter, Link} from 'react-router-dom'
 import './MealChoose.css'
 
 class cuisineChoose extends Component{
@@ -13,7 +13,7 @@ class cuisineChoose extends Component{
 
         if(cuisines)
         return(
-            <Router>
+            <BrowserRouter>
                 <div className='choices'>
                     
                     <div className='option'>                
@@ -38,7 +38,7 @@ class cuisineChoose extends Component{
                     </div>
                     
                 </div>
-            </Router>
+            </BrowserRouter>
         )
     }
 }
