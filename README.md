@@ -24,19 +24,15 @@ The Healthy-Meal-Alternative App for the Busy Professional.
 <p>This is the client side of the application which uses React as it's front end. Context is being used throughout the application in order to manage state.
  Knex is what is connecting my server and my client together. I have incorporated smoke testing and snapshot testing inside of my client application.</p>
 <br/>
-<p>This is a fullstack app using </p>
+<p>This is a fullstack app using Heroku for server hosting and Vercel for client hosting.</p>
 
 [Heroku](https://heroku.com) 
 
-<p> for server hosting and </p> 
-
 [Vercel](https://vercel.com) 
 
-<p>for client hosting.</p>
+<p>Below is the link to the API Repository for La Carte.</p> 
 
-<p>Here is the link to the </p> 
-
-[API](https://github.com/LFuen/laCarte-API) <p> for this App.</p>
+[API](https://github.com/LFuen/laCarte-API)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
