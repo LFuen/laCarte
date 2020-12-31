@@ -1,43 +1,45 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import renderer from 'react-test-renderer'
-import { BrowserRouter } from 'react-router-dom'
-import LaCarteContext from '../../context/LaCarteContext'
-import OrderUpdated from './OrderUpdated'
-
-
+import React from "react";
+import ReactDOM from "react-dom";
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
+import LaCarteContext from "../../context/LaCarteContext";
+import OrderUpdated from "./OrderUpdated";
 
 describe(`OrderUpdated Component`, () => {
-    describe(`Snapshot`, () => {
-        it(`renders the UI as expected`, () => {
-            const update = renderer.create(<BrowserRouter><OrderUpdated/></BrowserRouter>)
-                expect(update).toMatchSnapshot()            
-        })
-    })
+  describe(`Snapshot`, () => {
+    it(`renders the UI as expected`, () => {
+      const update = renderer.create(
+        <BrowserRouter>
+          <OrderUpdated />
+        </BrowserRouter>
+      );
+      expect(update).toMatchSnapshot();
+    });
+  });
 
-    describe(`Smoke test`, () => {
-        it(`Renders without crashing`, () => {
-            
-            const div = document.createElement('div');
+  describe(`Smoke test`, () => {
+    it(`Renders without crashing`, () => {
+      const div = document.createElement("div");
 
-            const value = {
-                meals: 'string',
-                chefs: 'string',
-                cuisines: 'string',
-                orders: 'string',
-                addOrder: 'string',
-                updateOrder: 'string',
-                deleteOrder: 'string',
-            };
+      const value = {
+        meals: "string",
+        chefs: "string",
+        cuisines: "string",
+        orders: "string",
+        addOrder: "string",
+        updateOrder: "string",
+        deleteOrder: "string",
+      };
 
-            ReactDOM.render(
-                <BrowserRouter>
-                    <LaCarteContext.Provider value={value}>
-                        <OrderUpdated />
-                    </LaCarteContext.Provider>                
-                </BrowserRouter>,
-                div)
-            ReactDOM.unmountComponentAtNode(div)
-        })
-    })
-})
+      ReactDOM.render(
+        <BrowserRouter>
+          <LaCarteContext.Provider value={value}>
+            <OrderUpdated />
+          </LaCarteContext.Provider>
+        </BrowserRouter>,
+        div
+      );
+      ReactDOM.unmountComponentAtNode(div);
+    });
+  });
+});
