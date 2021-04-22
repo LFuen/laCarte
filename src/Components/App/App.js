@@ -85,6 +85,7 @@ class App extends Component {
   }
 
   getCuisines() {
+    console.log(api.API_KEY, 'API KEY LINE 89')
     Promise.all([
       fetch(`${api.API_ENDPOINT}/api/cuisines`, {
         method: "GET",
