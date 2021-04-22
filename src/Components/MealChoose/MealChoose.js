@@ -3,7 +3,7 @@ import LaCarteContext from "../../context/LaCarteContext";
 import { Link } from "react-router-dom";
 import "./MealChoose.css";
 
-class cuisineChoose extends Component {
+class MealChoose extends Component {
   static contextType = LaCarteContext;
 
   render() {
@@ -54,4 +54,4 @@ class cuisineChoose extends Component {
   }
 }
 
-export default cuisineChoose;
+export default MealChoose;
